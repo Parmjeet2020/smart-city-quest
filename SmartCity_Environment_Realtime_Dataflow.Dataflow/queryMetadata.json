@@ -1,0 +1,43 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow 2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "traffic_api traffic_realtime_silver": {
+      "queryId": "7b4e7a29-9c09-4b65-ad89-ab1e238a9cca",
+      "queryName": "traffic_api traffic_realtime_silver",
+      "loadEnabled": false
+    },
+    "weather_api weather_realtime_silver": {
+      "queryId": "fcbb7809-c246-4da2-9443-448d2065033f",
+      "queryName": "weather_api weather_realtime_silver",
+      "loadEnabled": false
+    },
+    "SmartCity_Weather_Traffic_Realtime": {
+      "queryId": "f19d01f1-5235-42a0-8fdf-34e2ceae2412",
+      "queryName": "SmartCity_Weather_Traffic_Realtime",
+      "loadEnabled": false
+    },
+    "DefaultDestination": {
+      "queryId": "8cc0e3c0-5794-4514-bea6-700889ddea1e",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "SmartCity_Weather_Traffic_Realtime_DataDestination": {
+      "queryId": "760cc0f6-3b84-4d27-979a-f5e1d332a7e4",
+      "queryName": "SmartCity_Weather_Traffic_Realtime_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"a6742ef0-412c-47fe-ac1a-8f58460304e5\",\"DatasourceId\":\"39313d6f-3eba-4422-9783-483bb9b1f955\"}"
+    }
+  ]
+}

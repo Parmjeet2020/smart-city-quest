@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "SmartCity_Environment_Realtime_Dataflow"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "18e93ec6-01c9-9d56-48f6-a36fcc12a968"
+  }
+}
