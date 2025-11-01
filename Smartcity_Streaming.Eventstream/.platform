@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "Smartcity_Streaming"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1962fafe-1c62-8f40-46d5-3cbf34ab1d1f"
+  }
+}

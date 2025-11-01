@@ -1,0 +1,2042 @@
+{
+  "sources": [
+    {
+      "id": "d24b69ea-bcd9-40bb-988d-4421311dd1d9",
+      "name": "weathersource",
+      "type": "RealTimeWeather",
+      "properties": {
+        "latitude": 28.63,
+        "longitude": 77.22
+      },
+      "inputSchemas": [
+        {
+          "name": "mxo353",
+          "schema": {
+            "columns": [
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "description",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "iconCode",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "BigInt",
+                    "fields": null,
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "hasPrecipitation",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "realFeelTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "realFeelTemperatureShade",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "relativeHumidity",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dewPoint",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "wind",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "direction",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "degrees",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "description",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "speed",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "windGust",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "direction",
+                    "type": "Record",
+                    "fields": [],
+                    "items": null
+                  },
+                  {
+                    "name": "speed",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "uvIndex",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "uvIndexDescription",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "visibility",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "obstructionsToVisibility",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "cloudCover",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "cloudCeiling",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "pressure",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "pressureTendency",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "description",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "code",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "pastTwentyFourHourTemperatureDeparture",
+                "type": "Record",
+                "fields": [],
+                "items": null
+              },
+              {
+                "name": "apparentTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "windChillTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "wetBulbTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "precipitationSummary",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "pastHour",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past3Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past6Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past9Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past12Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past18Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past24Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "temperatureSummary",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "past6Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "minimum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      },
+                      {
+                        "name": "maximum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past12Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "minimum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      },
+                      {
+                        "name": "maximum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past24Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "minimum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      },
+                      {
+                        "name": "maximum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "daytime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "latitude",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "longitude",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  }
+                ],
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "destinations": [
+    {
+      "id": "3894a806-819e-44a0-b5a5-07aba0c2329d",
+      "name": "SmartCity-Weather-RealtimeHub-Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "a7aba76b-e64f-b2df-44f0-dec7ce8448ba",
+        "databaseName": "SmartCity_Environment_Realtime",
+        "tableName": "weather_realtimehub",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "SmartcityStreaming-stream",
+          "schemaName": "mxo353"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "SmartcityStreaming-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "description",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "iconCode",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "BigInt",
+                    "fields": null,
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "hasPrecipitation",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "realFeelTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "realFeelTemperatureShade",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "relativeHumidity",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dewPoint",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "wind",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "direction",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "degrees",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "description",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "speed",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "windGust",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "direction",
+                    "type": "Record",
+                    "fields": [],
+                    "items": null
+                  },
+                  {
+                    "name": "speed",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "uvIndex",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "uvIndexDescription",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "visibility",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "obstructionsToVisibility",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "cloudCover",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "cloudCeiling",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "pressure",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "pressureTendency",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "description",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "code",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "pastTwentyFourHourTemperatureDeparture",
+                "type": "Record",
+                "fields": [],
+                "items": null
+              },
+              {
+                "name": "apparentTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "windChillTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "wetBulbTemperature",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "value",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitLabel",
+                    "type": "Nvarchar(max)",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "unitType",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "precipitationSummary",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "pastHour",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past3Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past6Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past9Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past12Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past18Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past24Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitLabel",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unitType",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "BigInt",
+                            "fields": null,
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "temperatureSummary",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "past6Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "minimum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      },
+                      {
+                        "name": "maximum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past12Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "minimum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      },
+                      {
+                        "name": "maximum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "past24Hours",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "minimum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      },
+                      {
+                        "name": "maximum",
+                        "type": "Record",
+                        "fields": [
+                          {
+                            "name": "value",
+                            "type": "Float",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitLabel",
+                            "type": "Nvarchar(max)",
+                            "fields": null,
+                            "items": null
+                          },
+                          {
+                            "name": "unitType",
+                            "type": "Record",
+                            "fields": [
+                              {
+                                "name": "value",
+                                "type": "BigInt",
+                                "fields": null,
+                                "items": null
+                              }
+                            ],
+                            "items": null
+                          }
+                        ],
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "daytime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "latitude",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  },
+                  {
+                    "name": "longitude",
+                    "type": "Float",
+                    "fields": null,
+                    "items": null
+                  }
+                ],
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "2bb29682-2827-4b23-afb9-0f15d198fa39",
+      "name": "SmartcityStreaming-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "weathersource"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

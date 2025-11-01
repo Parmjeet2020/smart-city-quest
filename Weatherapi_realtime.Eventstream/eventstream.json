@@ -1,0 +1,534 @@
+{
+  "sources": [
+    {
+      "id": "86387cfa-aa72-4f7b-b100-4d9f4d74b492",
+      "name": "weatherapi-endpoint",
+      "type": "CustomEndpoint",
+      "properties": {},
+      "inputSchemas": [
+        {
+          "name": "1qqggqq",
+          "schema": {
+            "columns": [
+              {
+                "name": "geo_point_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_region",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_country",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lat",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lon",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_tz_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "localtime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temp_c",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "condition_text",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "wind_kph",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "humidity",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_co",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_no2",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm25",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm10",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "timestamp_millis",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        },
+        {
+          "name": "e31ay5",
+          "schema": {
+            "columns": [
+              {
+                "name": "geo_point_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_region",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_country",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lat",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lon",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_tz_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "localtime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temp_c",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "condition_text",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "wind_kph",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "humidity",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_co",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_no2",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm25",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm10",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "timestamp_millis",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "destinations": [
+    {
+      "id": "355ec8de-b7f2-4f28-b0c4-7be4cdbb7539",
+      "name": "SmartCity-Traffic-Weather-Realtime-Bronze",
+      "type": "Lakehouse",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "3c01b01c-5b0a-adb9-448f-96a8a49a1d20",
+        "schema": "weather_realtime",
+        "deltaTable": "weather_api",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "Weatherapirealtime-stream",
+          "schemaName": "e31ay5"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "Weatherapirealtime-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "geo_point_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_region",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_country",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lat",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lon",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_tz_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "localtime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temp_c",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "condition_text",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "wind_kph",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "humidity",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_co",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_no2",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm25",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm10",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "timestamp_millis",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ca24d0e2-4ca1-4eea-8be4-7999edf0ab0f",
+      "name": "SmartCity-Weather-Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "a7aba76b-e64f-b2df-44f0-dec7ce8448ba",
+        "databaseName": "SmartCity_Environment_Realtime",
+        "tableName": "weatherapi_realtime_table",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "Weatherapirealtime-stream",
+          "schemaName": "e31ay5"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "Weatherapirealtime-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "geo_point_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_name",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_region",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_country",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lat",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_lon",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "location_tz_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "localtime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temp_c",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "condition_text",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "wind_kph",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "humidity",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_co",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_no2",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm25",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "air_quality_pm10",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "timestamp_millis",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "af469866-2384-4a9d-9437-e53221695b98",
+      "name": "Weatherapirealtime-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "weatherapi-endpoint"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}
