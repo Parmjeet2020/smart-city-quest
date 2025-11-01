@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "SmartCity_Traffic_Weather_Realtime_Bronze"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3c01b01c-5b0a-adb9-448f-96a8a49a1d20"
+  }
+}
