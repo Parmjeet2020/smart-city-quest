@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SmartCity_Realtime_Environment_PowerBi_Semantic Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bcf0d5b2-9e6d-91a4-49cc-83050c750dfe"
+  }
+}

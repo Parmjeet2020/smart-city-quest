@@ -1,0 +1,249 @@
+table SmartCIty_Traffic_Weather_Realtime
+	lineageTag: f5f04bc4-5f8b-4787-8ab2-5f572a649c2e
+	sourceLineageTag: 6096a667-aab7-41b7-aa9c-b9d1164f11d8
+
+	column geo_point_name
+		dataType: string
+		lineageTag: 9b10712d-df0b-4342-865e-a8e48cda633e
+		sourceLineageTag: 16405cc2-bf82-498a-9311-38b111ff1e69
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: geo_point_name
+
+		annotation SummarizationSetBy = User
+
+	column PeakHourDelay_mins
+		dataType: double
+		lineageTag: 28dcf309-f021-4297-9f43-409177ac836d
+		sourceLineageTag: f3d105b4-a264-4347-a1b4-807344bc6372
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: PeakHourDelay_mins
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column air_quality_no2
+		dataType: string
+		lineageTag: 63f39481-d485-45ff-b952-641602bc10bd
+		sourceLineageTag: 5f78a6ee-a4ee-44ac-b913-f6075dba31b6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_no2
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_pm25
+		dataType: string
+		lineageTag: 6d1036b5-980b-4742-b851-59bca40a4167
+		sourceLineageTag: 4796fc0e-0367-4b97-addf-dcc9ef2eaa14
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_pm25
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_pm10
+		dataType: string
+		lineageTag: 285ba0a3-d7c9-4d5c-9dfb-63aa1f20c7d4
+		sourceLineageTag: d79881f1-4e7d-453a-8ac6-190df678bf3a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_pm10
+
+		annotation SummarizationSetBy = User
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		lineageTag: f1b52bc6-45ac-4777-a19a-b850232684ac
+		sourceLineageTag: 176d47f0-b6de-47df-85be-66edddfe9046
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = User
+
+	column AverageSpeed_kmph
+		dataType: int64
+		formatString: 0
+		lineageTag: 4911a71f-97d8-4fe4-9099-4a660b10a5a4
+		sourceLineageTag: f0215da0-b032-4b76-944b-0deebdccf9c2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AverageSpeed_kmph
+
+		annotation SummarizationSetBy = User
+
+	column CongestionIndex_percent
+		dataType: double
+		lineageTag: 61baeee5-b7b9-40e5-bc70-2e1f66c69c66
+		sourceLineageTag: 9a57c41e-f6d6-4ce7-8e97-7b562b31c243
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CongestionIndex_percent
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column localtime
+		dataType: string
+		lineageTag: 7a9dd6f7-a3c9-4bc3-800a-8ae8c6a190b9
+		sourceLineageTag: 5a53a25b-b4c6-4aa7-9dc1-08f7252a3015
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = User
+
+	column temp_c
+		dataType: string
+		lineageTag: 01fb55fb-8122-4e36-b42e-4bdb6809368a
+		sourceLineageTag: 994db9b7-adb7-4354-ab46-4e4022122141
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: temp_c
+
+		annotation SummarizationSetBy = User
+
+	column condition_text
+		dataType: string
+		lineageTag: c1bff24b-10a0-41bb-b463-d0f681bb1360
+		sourceLineageTag: a0504571-d0dc-4c04-b8f0-a3b685f255a8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: condition_text
+
+		annotation SummarizationSetBy = User
+
+	column wind_kph
+		dataType: string
+		lineageTag: 5789e1c0-2ae2-4ae7-990b-43b5019b8bb9
+		sourceLineageTag: 111fca10-a03c-42f7-a4cf-63ab351f3b77
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: wind_kph
+
+		annotation SummarizationSetBy = User
+
+	column humidity
+		dataType: string
+		lineageTag: aaceed6a-9037-420a-a9ff-bf6d283a4af8
+		sourceLineageTag: 89d6233d-55a5-4177-91d8-9b1ec8681bdc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: humidity
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_co
+		dataType: string
+		lineageTag: c0335a22-2ad1-4e2d-b30c-c34df0799175
+		sourceLineageTag: ee0dcd04-be2e-4843-aead-ff5df5f76bbd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_co
+
+		annotation SummarizationSetBy = User
+
+	column location_name
+		dataType: string
+		lineageTag: b3692a56-9157-41ab-b925-4468bde224ef
+		sourceLineageTag: d59958cf-16a0-4070-8497-d0da6e6e655f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_name
+
+		annotation SummarizationSetBy = User
+
+	column location_region
+		dataType: string
+		lineageTag: 23249a61-8613-49ca-9c77-f07c93206ff9
+		sourceLineageTag: 172a4911-ef51-4c07-8202-f8bcbd12bbe7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_region
+
+		annotation SummarizationSetBy = User
+
+	column location_country
+		dataType: string
+		lineageTag: 01a1ac6f-4ed1-4fa8-b5b1-b46c7f7d72ce
+		sourceLineageTag: 8f716457-14a2-4342-a4b2-7aa01acdad2d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = User
+
+	column location_lat
+		dataType: string
+		lineageTag: 41acfaff-5b20-470a-8272-2ab7c24151db
+		sourceLineageTag: 270cf853-e286-4ef5-8a12-176eafb9bbb8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_lat
+
+		annotation SummarizationSetBy = User
+
+	column location_lon
+		dataType: string
+		lineageTag: 1d50fd00-a2ca-4a0c-b5a8-63eab6819d45
+		sourceLineageTag: a260708c-16d4-4187-afe1-d314866e3d86
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_lon
+
+		annotation SummarizationSetBy = User
+
+	column location_tz_id
+		dataType: string
+		lineageTag: bea16156-5641-41d7-8d6f-7db82968889c
+		sourceLineageTag: c553b8f5-27d7-43ef-8c81-82bedb06f084
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_tz_id
+
+		annotation SummarizationSetBy = User
+
+	column Day = ```
+			DAy(SmartCIty_Traffic_Weather_Realtime[localtime])    
+			```
+		formatString: 0
+		lineageTag: b19c9cd3-5a28-40bb-bedb-2fcc98af6be8
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hour = ```
+			HOUR(SmartCIty_Traffic_Weather_Realtime[localtime])  
+			```
+		formatString: 0
+		lineageTag: b1b18b60-aa7a-4920-a808-d16981c1aa93
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Minute = ```
+			MINUTE(SmartCIty_Traffic_Weather_Realtime[localtime]) 
+			```
+		formatString: 0
+		lineageTag: 5339e351-3027-4b4a-88f9-cea2c658084c
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SmartCIty_Traffic_Weather_Realtime = entity
+		mode: directQuery
+		source
+			entityName: SmartCIty_Traffic_Weather_Realtime
+			expressionSource: 'DirectQuery to AS - SmartCity_Environment_Dashboard_Semantic_Model'
+

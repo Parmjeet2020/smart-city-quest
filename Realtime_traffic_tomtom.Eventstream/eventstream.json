@@ -1,0 +1,263 @@
+{
+  "sources": [
+    {
+      "id": "64370351-29c8-47d3-83d4-5856ddfd5c18",
+      "name": "Realtime-traffic-tomtom",
+      "type": "CustomEndpoint",
+      "properties": {},
+      "inputSchemas": [
+        {
+          "name": "n93tdk",
+          "schema": {
+            "columns": [
+              {
+                "name": "City",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Latitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Longitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AverageSpeed_kmph",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "CongestionIndex_percent",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "PeakHourDelay_mins",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "timestamp_millis",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "destinations": [
+    {
+      "id": "93452e3b-b4c4-48d0-8b41-77e1feacd007",
+      "name": "3d295878-faa9-467d-b0da-f87b72c4f220",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "DirectIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "a7aba76b-e64f-b2df-44f0-dec7ce8448ba",
+        "tableName": "traffic_realtime_table",
+        "connectionName": null,
+        "mappingRuleName": null
+      },
+      "inputNodes": [
+        {
+          "name": "Realtimetraffictomtom-stream"
+        }
+      ]
+    },
+    {
+      "id": "e238145c-f840-4d50-ab21-e3a5c3576d29",
+      "name": "SmartCity-Traffic-Weather-Realtime-Bronze",
+      "type": "Lakehouse",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "3c01b01c-5b0a-adb9-448f-96a8a49a1d20",
+        "schema": "traffic_realtime",
+        "deltaTable": "traffic_api",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "Realtimetraffictomtom-stream",
+          "schemaName": "n93tdk"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "Realtimetraffictomtom-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "City",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Latitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Longitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AverageSpeed_kmph",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "CongestionIndex_percent",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "PeakHourDelay_mins",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "timestamp_millis",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "e857d66b-0e76-44f5-a12a-1c96dec9a771",
+      "name": "SmartCity-Traffic-Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "a7aba76b-e64f-b2df-44f0-dec7ce8448ba",
+        "databaseName": "SmartCity_Environment_Realtime",
+        "tableName": "traffic_realtime_table",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "Realtimetraffictomtom-stream",
+          "schemaName": "n93tdk"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "Realtimetraffictomtom-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "City",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Latitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Longitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AverageSpeed_kmph",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "CongestionIndex_percent",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "PeakHourDelay_mins",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dateTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "timestamp_millis",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "cd721239-a26e-4331-b60e-3ab333150f56",
+      "name": "Realtimetraffictomtom-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "Realtime-traffic-tomtom"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

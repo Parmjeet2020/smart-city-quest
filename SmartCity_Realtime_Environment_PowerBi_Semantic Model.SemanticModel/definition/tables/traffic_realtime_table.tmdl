@@ -1,0 +1,98 @@
+table traffic_realtime_table
+	lineageTag: 1013423b-2417-4ae2-9953-e357551c6e33
+
+	column City
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: e50db157-b630-4669-b059-5b217386616c
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		sourceProviderType: double
+		lineageTag: dbf6c98a-e5f6-4aef-b0cc-32ffb37a9bae
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		sourceProviderType: double
+		lineageTag: 95fe01a1-41c1-4889-9366-b0f8dd197d52
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AverageSpeed_kmph
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6c135f86-663b-474f-80d0-474b17182352
+		summarizeBy: sum
+		sourceColumn: AverageSpeed_kmph
+
+		annotation SummarizationSetBy = Automatic
+
+	column CongestionIndex_percent
+		dataType: double
+		sourceProviderType: double
+		lineageTag: a1019b4f-8bd2-436c-a62a-18f5f1ff731f
+		summarizeBy: sum
+		sourceColumn: CongestionIndex_percent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PeakHourDelay_mins
+		dataType: double
+		sourceProviderType: double
+		lineageTag: ce48f2b3-e4cc-4df4-912c-9baea122fdfd
+		summarizeBy: sum
+		sourceColumn: PeakHourDelay_mins
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column dateTime
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: de8e9612-a4f4-424c-a5e9-5aff6469291a
+		summarizeBy: none
+		sourceColumn: dateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5c248a24-f068-47da-912b-3dbadcafe0e9
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = Automatic
+
+	partition traffic_realtime_table = m
+		mode: directQuery
+		source =
+				let
+				    Source = AzureDataExplorer.Contents("https://trd-776j54ztrnkh7ke1kj.z8.kusto.fabric.microsoft.com", "SmartCity_Environment_Realtime"),
+				    traffic_realtime_table1 = Source{[Name="traffic_realtime_table"]}[Data]
+				in
+				    traffic_realtime_table1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

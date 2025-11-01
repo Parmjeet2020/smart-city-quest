@@ -1,0 +1,95 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "smartcity_traffic_weather_realtime.location_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SmartCIty_Traffic_Weather_Realtime",
+			          "ConceptualProperty": "location_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "City": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "smartcity_traffic_weather_realtime.location_region": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SmartCIty_Traffic_Weather_Realtime",
+			          "ConceptualProperty": "location_region"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "City": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "smartcity_traffic_weather_realtime.localtime": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SmartCIty_Traffic_Weather_Realtime",
+			          "ConceptualProperty": "localtime"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DateTime": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "smartcity_traffic_weather_realtime.geo_point_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SmartCIty_Traffic_Weather_Realtime",
+			          "ConceptualProperty": "geo_point_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "City": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

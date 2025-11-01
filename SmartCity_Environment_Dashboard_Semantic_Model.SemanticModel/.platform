@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SmartCity_Environment_Dashboard_Semantic_Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1ff954da-be5f-bf70-45b5-0181853e18d0"
+  }
+}

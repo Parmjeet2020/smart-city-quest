@@ -1,0 +1,9 @@
+expression 'DirectLake - SmartCity_Traffic_Weather_Realtime_Gold' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/17b733fc-1594-4387-b79c-380cc4bad913/a31e291b-059a-4453-bb21-0d608c35bda8", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 7b1b7846-2c0e-477c-a348-28aaf4423976
+
+	annotation PBI_IncludeFutureArtifacts = False
+
