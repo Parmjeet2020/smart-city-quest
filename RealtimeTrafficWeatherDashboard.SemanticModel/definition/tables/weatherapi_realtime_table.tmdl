@@ -1,0 +1,168 @@
+table weatherapi_realtime_table
+	lineageTag: f92363b3-e945-4095-99d0-589e079fe456
+
+	column geo_point_name
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 2433342d-60f0-40b7-b87d-445e1304c2b3
+		summarizeBy: none
+		sourceColumn: geo_point_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_name
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 7fc27ae4-d2c4-4a66-84a2-0346ca7561ac
+		summarizeBy: none
+		sourceColumn: location_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_region
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: b1836a8a-41eb-463b-a7a6-e8e11c6997e1
+		summarizeBy: none
+		sourceColumn: location_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_country
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 26c262f6-499b-4ab5-9faf-97d783e4fc4d
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_lat
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 54cf65c3-3a1a-49f9-a273-cea926985920
+		summarizeBy: none
+		sourceColumn: location_lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_lon
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 130202ff-51dc-4fe5-bed3-f79cda452067
+		summarizeBy: none
+		sourceColumn: location_lon
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_tz_id
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: b8950632-074b-4630-9143-b96469d41b23
+		summarizeBy: none
+		sourceColumn: location_tz_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column localtime
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f1c2a484-0b86-4c0d-ac0a-0eff2d56a735
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column temp_c
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 2a0b28b2-b59e-41d8-8086-3be2eb35ae5c
+		summarizeBy: none
+		sourceColumn: temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+	column condition_text
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 44981e43-173a-42cb-a31a-dcf582bf58b2
+		summarizeBy: none
+		sourceColumn: condition_text
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind_kph
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: c2506ddf-e67a-49da-9cb6-896e5449111a
+		summarizeBy: none
+		sourceColumn: wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+	column humidity
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 671038b3-b9b6-43df-9d9a-73fa1e1928b4
+		summarizeBy: none
+		sourceColumn: humidity
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_co
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 1c24084a-96e1-4a1b-80d1-e48edc815007
+		summarizeBy: none
+		sourceColumn: air_quality_co
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_no2
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: fc3717fc-c752-4fab-b29d-6a4f37a3e293
+		summarizeBy: none
+		sourceColumn: air_quality_no2
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_pm25
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 9b74c303-8fde-46c3-b6ce-f877ed2b834b
+		summarizeBy: none
+		sourceColumn: air_quality_pm25
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_pm10
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 48db36bc-e69b-4044-bb21-a4c1534974b4
+		summarizeBy: none
+		sourceColumn: air_quality_pm10
+
+		annotation SummarizationSetBy = Automatic
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 82d61ccb-2c85-48e8-8292-dd047da8ad49
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = Automatic
+
+	partition weatherapi_realtime_table = m
+		mode: directQuery
+		source =
+				let
+				    Source = AzureDataExplorer.Contents("https://trd-776j54ztrnkh7ke1kj.z8.kusto.fabric.microsoft.com", "SmartCity_Environment_Realtime"),
+				    weatherapi_realtime_table1 = Source{[Name="weatherapi_realtime_table"]}[Data]
+				in
+				    weatherapi_realtime_table1
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+expression 'DirectQuery to AS - SmartCity_Environment_PowerBI_Dashboard' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/FabricHackathon2025Dev", "SmartCity_Environment_PowerBI_Dashboard"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: ed4f2954-26a7-42c8-a7c9-088816bdeb37
+
+	annotation PBI_IncludeFutureArtifacts = True
+

@@ -1,0 +1,245 @@
+table weather_realtimehub
+	lineageTag: 7858bc11-feba-45bc-968a-806a8c9cccee
+
+	column dateTime
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 46df0bc7-e82d-4490-9f6c-a98a6dd34821
+		summarizeBy: none
+		sourceColumn: dateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 7486ba1f-31d3-452a-a6e2-b01ded922eb9
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column iconCode
+		dataType: string
+		lineageTag: a797667c-a724-48ec-8b3c-ba1ddd683375
+		summarizeBy: none
+		sourceColumn: iconCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column hasPrecipitation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 5517e1f3-7e89-4e92-8b1a-03f197de970a
+		summarizeBy: none
+		sourceColumn: hasPrecipitation
+
+		annotation SummarizationSetBy = Automatic
+
+	column temperature
+		dataType: string
+		lineageTag: b6540715-05f6-4157-83b4-b15128735f38
+		summarizeBy: none
+		sourceColumn: temperature
+
+		annotation SummarizationSetBy = Automatic
+
+	column realFeelTemperature
+		dataType: string
+		lineageTag: e196f3bb-3c77-4970-b52d-809bb99dc646
+		summarizeBy: none
+		sourceColumn: realFeelTemperature
+
+		annotation SummarizationSetBy = Automatic
+
+	column realFeelTemperatureShade
+		dataType: string
+		lineageTag: 1c4591eb-70b7-48b0-9d40-e6a03e3188ac
+		summarizeBy: none
+		sourceColumn: realFeelTemperatureShade
+
+		annotation SummarizationSetBy = Automatic
+
+	column relativeHumidity
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0ef20301-8964-4043-b841-bfbc413c4433
+		summarizeBy: sum
+		sourceColumn: relativeHumidity
+
+		annotation SummarizationSetBy = Automatic
+
+	column dewPoint
+		dataType: string
+		lineageTag: 7adba515-4bd3-4ae4-8542-02b6ab23d060
+		summarizeBy: none
+		sourceColumn: dewPoint
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind
+		dataType: string
+		lineageTag: 131aca84-7de6-4cb7-a20a-32c3a163cafc
+		summarizeBy: none
+		sourceColumn: wind
+
+		annotation SummarizationSetBy = Automatic
+
+	column windGust
+		dataType: string
+		lineageTag: 22ca1830-5d5f-451a-9d54-f231fb09cfa1
+		summarizeBy: none
+		sourceColumn: windGust
+
+		annotation SummarizationSetBy = Automatic
+
+	column uvIndex
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 57efe206-83b0-4f57-9aaa-e1505e8b6130
+		summarizeBy: sum
+		sourceColumn: uvIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column uvIndexDescription
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a8ddcdc9-5aea-4c1a-88be-a2928bf18bae
+		summarizeBy: none
+		sourceColumn: uvIndexDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column visibility
+		dataType: string
+		lineageTag: 27153875-1eee-49f2-98d7-0d139a3e2deb
+		summarizeBy: none
+		sourceColumn: visibility
+
+		annotation SummarizationSetBy = Automatic
+
+	column obstructionsToVisibility
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 6f6939c8-7362-4ecf-8294-976bab8a1acc
+		summarizeBy: none
+		sourceColumn: obstructionsToVisibility
+
+		annotation SummarizationSetBy = Automatic
+
+	column cloudCover
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3b1540e9-d071-4f4c-bd6e-4ad9c2dccba1
+		summarizeBy: sum
+		sourceColumn: cloudCover
+
+		annotation SummarizationSetBy = Automatic
+
+	column cloudCeiling
+		dataType: string
+		lineageTag: 9031922d-608b-453d-8fa7-cd4b67f99de7
+		summarizeBy: none
+		sourceColumn: cloudCeiling
+
+		annotation SummarizationSetBy = Automatic
+
+	column pressure
+		dataType: string
+		lineageTag: 32171c8c-a07a-4a5e-b495-06be3ace22fd
+		summarizeBy: none
+		sourceColumn: pressure
+
+		annotation SummarizationSetBy = Automatic
+
+	column pressureTendency
+		dataType: string
+		lineageTag: 6dcfecaa-006e-491f-857b-cd475edab8b6
+		summarizeBy: none
+		sourceColumn: pressureTendency
+
+		annotation SummarizationSetBy = Automatic
+
+	column pastTwentyFourHourTemperatureDeparture
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 0eb27ca1-d128-4a8e-bddd-f98987a67e77
+		summarizeBy: none
+		sourceColumn: pastTwentyFourHourTemperatureDeparture
+
+		annotation SummarizationSetBy = Automatic
+
+	column apparentTemperature
+		dataType: string
+		lineageTag: 5521da87-9714-441b-b62e-2209556b3a82
+		summarizeBy: none
+		sourceColumn: apparentTemperature
+
+		annotation SummarizationSetBy = Automatic
+
+	column windChillTemperature
+		dataType: string
+		lineageTag: f5b35827-0f0e-4f77-9fd6-83ac60f95115
+		summarizeBy: none
+		sourceColumn: windChillTemperature
+
+		annotation SummarizationSetBy = Automatic
+
+	column wetBulbTemperature
+		dataType: string
+		lineageTag: e5ea3d97-e7f5-4198-adc3-a1dd185b7df1
+		summarizeBy: none
+		sourceColumn: wetBulbTemperature
+
+		annotation SummarizationSetBy = Automatic
+
+	column precipitationSummary
+		dataType: string
+		lineageTag: 91d937f9-a753-4273-9dd0-9c063be4123b
+		summarizeBy: none
+		sourceColumn: precipitationSummary
+
+		annotation SummarizationSetBy = Automatic
+
+	column temperatureSummary
+		dataType: string
+		lineageTag: 199d7587-68ec-427a-82d3-18c509609b8c
+		summarizeBy: none
+		sourceColumn: temperatureSummary
+
+		annotation SummarizationSetBy = Automatic
+
+	column daytime
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 799734b6-b06d-43ef-a435-d93361d4742d
+		summarizeBy: none
+		sourceColumn: daytime
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 4d81e391-4eff-4b3b-8ea4-37db258b2e3a
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	partition weather_realtimehub = m
+		mode: directQuery
+		source =
+				let
+				    Source = AzureDataExplorer.Contents("https://trd-776j54ztrnkh7ke1kj.z8.kusto.fabric.microsoft.com", "SmartCity_Environment_Realtime"),
+				    weather_realtimehub1 = Source{[Name="weather_realtimehub"]}[Data]
+				in
+				    weather_realtimehub1
+
+	annotation PBI_ResultType = Table
+

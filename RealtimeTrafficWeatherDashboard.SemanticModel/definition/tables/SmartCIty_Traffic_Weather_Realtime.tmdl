@@ -1,0 +1,216 @@
+table SmartCIty_Traffic_Weather_Realtime
+	lineageTag: e79925b4-9e8e-4626-aea0-87343960dbf1
+	sourceLineageTag: 56306071-bbe9-42d7-9ac1-e9cfa2118f96
+
+	column geo_point_name
+		dataType: string
+		lineageTag: 40cf1da9-2f64-456c-82b6-ad276885e749
+		sourceLineageTag: f5815aaf-8c8d-4352-8894-56dc24405962
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: geo_point_name
+
+		annotation SummarizationSetBy = User
+
+	column PeakHourDelay_mins
+		dataType: double
+		lineageTag: 7b9bef34-2544-414c-802c-c545d0418388
+		sourceLineageTag: 199fe3ec-91d8-4c0f-9d6a-94ad86fac9ea
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: PeakHourDelay_mins
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column air_quality_no2
+		dataType: string
+		lineageTag: 59443549-463c-42c3-b060-c82c2c324699
+		sourceLineageTag: 9a55a3c5-9b53-4246-8f8a-5ff43e7bb8f3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_no2
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_pm25
+		dataType: string
+		lineageTag: d4402c51-f6a5-4031-bb7f-d487e34b1ed2
+		sourceLineageTag: 9942b0c8-f62a-4b77-b81a-d0e91996dd2b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_pm25
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_pm10
+		dataType: string
+		lineageTag: 98ea1a44-ab47-4c5f-9259-514828e8ad8e
+		sourceLineageTag: 59d2a621-fd5a-4f19-be50-2fad26affedc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_pm10
+
+		annotation SummarizationSetBy = User
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		lineageTag: f15398a3-2942-49e6-ab71-e3ea1caf7416
+		sourceLineageTag: 18c438ef-fa28-4a1a-bba7-458b993a9b2f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = User
+
+	column AverageSpeed_kmph
+		dataType: int64
+		formatString: 0
+		lineageTag: f9cae0d9-025e-49b0-8460-63d3756f7662
+		sourceLineageTag: a3c42fad-2670-4899-ab07-27d384b92805
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AverageSpeed_kmph
+
+		annotation SummarizationSetBy = User
+
+	column CongestionIndex_percent
+		dataType: double
+		lineageTag: 901e47aa-c852-429c-a000-040ba4fbf05e
+		sourceLineageTag: b6c6d2e4-537b-4b39-9842-93878be7d0f1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CongestionIndex_percent
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column localtime
+		dataType: string
+		lineageTag: 1808f50a-7b32-41ca-8023-89f6f96e7a26
+		sourceLineageTag: 1258570b-284d-4bff-b52c-d78f720ec223
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = User
+
+	column temp_c
+		dataType: string
+		lineageTag: dec03cd1-51a4-41f3-be08-36b165e45e59
+		sourceLineageTag: 555ba298-8d92-4164-a22f-bfb81b86ba15
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: temp_c
+
+		annotation SummarizationSetBy = User
+
+	column condition_text
+		dataType: string
+		lineageTag: 933fdaa8-96c5-4e44-8a6a-a9aa23368a3b
+		sourceLineageTag: a16ee684-1907-4b6b-b117-0989fc7e53ca
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: condition_text
+
+		annotation SummarizationSetBy = User
+
+	column wind_kph
+		dataType: string
+		lineageTag: 183e0eb5-c3f4-4239-babb-6700c0ad6bd8
+		sourceLineageTag: 1c7900f6-782d-4614-92a4-79680c11c9f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: wind_kph
+
+		annotation SummarizationSetBy = User
+
+	column humidity
+		dataType: string
+		lineageTag: 1a462c85-17b9-4408-bf23-ba4e41d1220d
+		sourceLineageTag: c30b534e-5e1e-4b86-8e9a-0e917dba3339
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: humidity
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_co
+		dataType: string
+		lineageTag: 982eb4cb-b373-4303-813a-b8bd7d4382d1
+		sourceLineageTag: 65578506-c290-43c3-9515-162ce9b3ec0a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_co
+
+		annotation SummarizationSetBy = User
+
+	column location_name
+		dataType: string
+		lineageTag: ebcd8660-7aea-4838-93cd-c32d2722fe07
+		sourceLineageTag: cc596097-ced6-4a13-bf5b-ee3b2e548ff0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_name
+
+		annotation SummarizationSetBy = User
+
+	column location_region
+		dataType: string
+		lineageTag: 8bf17c53-7f46-4f06-b3ee-5c962ce6ab1c
+		sourceLineageTag: bb0623e6-a7cc-4d5c-86ff-1f934510d39e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_region
+
+		annotation SummarizationSetBy = User
+
+	column location_country
+		dataType: string
+		lineageTag: 310197db-ab91-4ed2-9d91-0a7027a244e4
+		sourceLineageTag: 7972d1fb-eb1e-4e70-a6e3-47a320221270
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = User
+
+	column location_lat
+		dataType: string
+		lineageTag: dfea41fe-ceb2-413d-b492-ce916e820b08
+		sourceLineageTag: 28689283-a10e-4895-9525-bb05e64edb91
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_lat
+
+		annotation SummarizationSetBy = User
+
+	column location_lon
+		dataType: string
+		lineageTag: a8687dd3-a711-46a5-9457-fad643d34639
+		sourceLineageTag: 7baef3aa-3128-4ac6-8692-cc4bfc3b2295
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_lon
+
+		annotation SummarizationSetBy = User
+
+	column location_tz_id
+		dataType: string
+		lineageTag: b91196ab-765a-430b-8456-28afd1fa944a
+		sourceLineageTag: 68dcf0c9-ec1c-41a6-9ad0-3ab6606921bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_tz_id
+
+		annotation SummarizationSetBy = User
+
+	partition SmartCIty_Traffic_Weather_Realtime = entity
+		mode: directQuery
+		source
+			entityName: SmartCIty_Traffic_Weather_Realtime
+			expressionSource: 'DirectQuery to AS - SmartCity_Environment_PowerBI_Dashboard'
+
