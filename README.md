@@ -147,10 +147,7 @@ Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the d
 #### Power Bi Dashboard
 <hr width="25%"/>
 Power Bi dashboard has several reports, built on the data from Gold lakehouse. Few of those reports are:
-  - 6-hour Weather & Traffic Forecast: provides short-term, localized predictions about weather and road conditions over the next six hours which are ideal for travel, logistics, and real-time decision-making
-  - 6-hour Wind & speed Forecast: provides a short-term prediction of wind conditions—direction, intensity, and gusts—for the next six hours. It’s especially useful for aviation, marine operations, logistics, outdoor events, and real-time traffic or safety planning
-  - Weather & Air Quality Insights: provide a combined view of atmospheric conditions (weather) and pollution levels (air quality), helping users understand not just what the weather will be but how healthy and safe the air will be to breathe or operate in
-  - Correlation KPIs (weather, AQI & Traffic): these reveal how environmental and atmospheric factors affect mobility, safety, and pollution. These Correlation KPIs help identify why certain traffic or air conditions occur and how to predict or manage them better
+- 6 hour Weather & Traffic Forecast: provides short-term, localized predictions about weather and road conditions over the next six hours which are ideal for travel, logistics, and real-time decision-making
 
 Below diagram gives a glimpse of the dashboard:
 
