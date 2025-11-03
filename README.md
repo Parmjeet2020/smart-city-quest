@@ -150,7 +150,7 @@ Below diagram shows the pipeline canvas:
 
 #### Gold Lakehouse
 ---
-Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the data factory pipeline "SmartCity_Traffic_Realtime_Pipeline" triggers merge operation of the datasets in silver layer. While merging the dataset, data of only selective fields is being stored in the gold lakehouse table "SmartCIty_Traffic_Weather_Realtime". Data from this lakehouse is used to report important KPIs on Power Bi dashboard and for ML model notebook to forecast. Shown below is the lakehouse table view:
+Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the pipeline "SmartCity_Traffic_Realtime_Pipeline" triggers merge operation of the datasets in silver layer. While merging the dataset, data of only selective fields is being stored in the gold lakehouse table "SmartCIty_Traffic_Weather_Realtime". Data from this lakehouse is used to report important KPIs on Power Bi dashboard and for ML model notebook to forecast. Shown below is the lakehouse table view:
 
 <img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/7338e082-4d6a-4696-b6fd-28834095047b" />
 
