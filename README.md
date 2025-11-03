@@ -5,7 +5,7 @@ The project aims at gathering the Weather and Traffic data for selective 5 citie
 The MS Fabric components involved in this project are:
 - Lakehouses (Medallion architecture)
 - Eventhouse, EventStream & Eventhub
-- Notebooks
+- Notebooks (including Fabric ML)
 - Dataflow Gen2
 - Pipelines 
 - PowerBI Dashboards
