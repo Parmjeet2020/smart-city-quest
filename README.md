@@ -8,6 +8,7 @@ The project aims at gathering the Weather and Traffic data for selective 5 citie
 
 ## High level flow
 ***
+![Smart City Quest High Level Flow](https://github.com/user-attachments/assets/1aee8847-e9a1-405f-bf1e-e8f2c4c917d3)
 
 ## Project Demo
 ***
