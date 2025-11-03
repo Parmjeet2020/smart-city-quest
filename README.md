@@ -1,4 +1,5 @@
-# Project Smart City Quest: Showcasing "Best Use of Real-Time Intelligence (RTI)" with Microsoft Fabric
+# Project: Smart City Quest
+_Showcasing "Best Use of Real-Time Intelligence (RTI)" with Microsoft Fabric_****
 
 The project aims at gathering the Weather and Traffic data for selective 5 cities in realtime and reporting in realtime how these parameters are changing every hour. It then shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours.
 The MS Fabric components involved in this project are:
