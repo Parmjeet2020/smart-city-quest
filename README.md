@@ -48,7 +48,9 @@ Steps to create workspace
     - Viewer: Read-only access.
 - Click on save
 Created workspace will appear in the workspace list.
-Once created, open it — will see the Fabric item creation menu (e.g., New item → Lakehouse, Eventstream, Eventhouse, Data Pipeline, etc.).
+Once created, click on "Workspacec" left-hand navigation and select the created workspace. This is where all the components you're going to create appears. Shown below is the dev workspace of the projet.
+<img width="957" height="415" alt="image" src="https://github.com/user-attachments/assets/6d529c7e-f8d9-49b0-9fb2-730593450c15" />
+
 
 #### Lakehouses
 
