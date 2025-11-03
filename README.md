@@ -1,4 +1,4 @@
-# Project Smart City Quest: Showcasing "Best Use of Real-Time Intelligence (RTI)" with Microsoft Fabric
+<img width="960" height="411" alt="image" src="https://github.com/user-attachments/assets/c49161ec-2e2c-4867-b3ae-1138a60f2209" /># Project Smart City Quest: Showcasing "Best Use of Real-Time Intelligence (RTI)" with Microsoft Fabric
 ***
 The project aims at gathering the Weather and Traffic data for selective 5 cities in realtime and reporting in realtime how these parameters are changing every hour. It then shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours.
 
@@ -17,7 +17,7 @@ The project aims at gathering the Weather and Traffic data for selective 5 citie
 ***
 ### Environments
 
-### Dev Workspace
+## Dev Workspace
 Prerequiste to setup:
 - Must have a Microsoft Fabric license (Pro or higher, or Fabric Capacity SKU like F8, F16, etc.).
 - Need to be part of a Microsoft 365 tenant with Fabric enabled.
@@ -62,6 +62,30 @@ Shown below is one of the Lakehouse in the projet.
 
 
 #### Eventhouses
+- In the workspace created earlier, create a new item → Eventhouse
+  - This provides the queryable streaming database in KQL
+- In the Eventhouse, can see a default KQL database created.
+
+## Event Stream
+- In the workspace, create a new item → In the Real-Time Hub, create a new Eventstream
+  - Configure the source
+    - Choose a custom endpoint
+    - give the name to the source
+    - click on Add
+- The processed events are be connected to two destinations: Eventhouse and lakehouse
+- Connect the event stream to lakehouse
+  - As shown in the digram below, follow the steps to add lake house as destination:
+    - On the Eventstream canvas, click Add destination → choose Lakehouse
+    - Configure:
+      - Destination name – SmartCity_Traffic_Realtime_LakeHouse
+      - Select the Bronze lakehouse
+        - create a new delta table for bronze
+        - Input data format (JSON, Avro, CSV) for the incoming events
+    - Publish the Eventstream. Once Active/Ingesting, can monitor status and verify via Data preview
+ <img width="960" height="411" alt="image" src="https://github.com/user-attachments/assets/f558c879-4a94-4ddf-b23e-cada8eeba6bb" />
+
+Shown below is one of the event streams created in the project.
+<img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/e9b5349e-955c-476e-b951-3f99d684baeb" />
 
 #### Notebooks
 
