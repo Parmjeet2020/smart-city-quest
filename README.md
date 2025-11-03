@@ -2,6 +2,7 @@
 **_Showcasing "Best Use of Real-Time Intelligence (RTI)" with Microsoft Fabric_**
 
 The project aims at gathering the Weather and Traffic data for selective 5 cities in realtime and reporting in realtime how these parameters are changing every hour. It then shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours.
+
 The MS Fabric components involved in this project are:
 - Lakehouses (Medallion architecture)
 - Eventhouse, EventStream & Eventhub
@@ -13,6 +14,25 @@ The MS Fabric components involved in this project are:
 - Deployment Pipelines
 - Email notifications
 - Realtime Alerts
+- Activator
+
+**Intended Audience**
+The project is developed for environmentalists and traffic advisory teams to help plan their initiatives to maintain and plan traffic on roads during adverse conditions.
+
+### How does the solution look like 
+- The weather and traffic API endpoints are connected to Eventsteams through Eventhub connection using a notebook which gets executed every 15mins to fetch the live stream data to Bronze lakehouse. 
+- In parallel the livestream data is sent to KQL database though Eventhouse. 
+- In addition to this it also uses weather connector available in Realtime hub of Eventstream from where the realtime data is streamed to Eventhouse.
+- Using pipeline the data moves from Bronze layer to Silver lakehouse.
+- The weather and traffic data is merged using Dataflow Gen2 and saves it in Gold lakehouse.
+- In Gold lakehouse, the forecast is predicted using Fabric ML capability on the merged data and saved back to the lakehouse.
+- The realtime dashboard is created from Eventhouse using KQL queries to view near realtime KPIs like Average Rain Fall, Traffic Speed, Wind Speed, Air Quality Index, Traffic Reliability Index, Congestion Index.
+- A PowerBI dashboard is also built on gold lakehouse persisted data to view historic progression of the KPIs and view current vs forecast data.
+- Realtime alerts using Fabric Activator are sent from both the dashboards if a particular KPI goes beyond a threshold limit like Congestion alert when congestion index is greater than 80.
+- Alerts are also sent for anomalies in ingested realtime data if the ingested row count is zero.
+
+### How does this solution help
+It shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc to highlight the impact of traffic on weather. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours to help people and organizations plan in advance. 
 
 ## Logical Architecture
 
