@@ -2,12 +2,13 @@
 
 The project aims at gathering the Weather and Traffic data for selective 5 cities in realtime and reporting in realtime how these parameters are changing every hour. It then shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours.
 The MS Fabric components involved in this project are:
-- Eventghub
+- Eventhub
 - EventStream and Eventhouse
 - Lakehouses (Medallion architecture)
 - Realtime Alerts
 - Realtime Dashboard
 - PowerBI Dashboards
+- Dataflow Gen2
 - Data Fatory 
 - Deployment Pipelines
 - Email notifications
@@ -85,7 +86,7 @@ Shown below is one of the event house in the project.
 
 <img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/18808821-2422-4b57-8b7b-f0978d3236e7" />
 
-#### Event Stream
+#### EventStream
 ---
 - In the workspace, create a new item → In the Real-Time Hub, create a new Eventstream
   - Configure the source
