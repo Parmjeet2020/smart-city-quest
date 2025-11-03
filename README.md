@@ -17,7 +17,7 @@ The project aims at gathering the Weather and Traffic data for selective 5 citie
 
 ### Environments
 
-## Dev Workspace
+### Dev Workspace
 Prerequiste to setup:
 - Must have a Microsoft Fabric license (Pro or higher, or Fabric Capacity SKU like F8, F16, etc.).
 - Need to be part of a Microsoft 365 tenant with Fabric enabled.
@@ -72,7 +72,7 @@ Shown below is one of the event house in the project.
 
 <img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/18808821-2422-4b57-8b7b-f0978d3236e7" />
 
-## Event Stream
+#### Event Stream
 - In the workspace, create a new item → In the Real-Time Hub, create a new Eventstream
   - Configure the source
     - Choose a custom endpoint
