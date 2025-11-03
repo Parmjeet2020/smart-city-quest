@@ -126,7 +126,7 @@ Clicking on any notebook takes to following screen:
 Pipeline created to orchestrate notebooks execution for data ingestion, silver layer curation, forecast ML models and dataflow execution for preparing gold lakehouse. 
 
 Following are the steps to setup pipeline:
-- In workspace created earlier, click New item → Pipelin
+- In workspace created earlier, click New item → Pipeline
 - Give the pipeline a meaningful name such as "SmartCity_Traffic_Realtime_Pipeline"
 - In the pipeline canvas, add relevant activities required to perform the funcion. For example, for this project following activities are in the pipeline:
   - Notebook: to invoke event hubs to bring data from weather & traffic API, through event stream and running forecast ML model
@@ -145,9 +145,9 @@ Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the d
 <img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/7338e082-4d6a-4696-b6fd-28834095047b" />
 
 #### Power Bi Dashboard
-<hr width="25%"/>
 Power Bi dashboard has several reports, built on the data from Gold lakehouse. Few of those reports are:
-- 6 hour Weather & Traffic Forecast: provides short-term, localized predictions about weather and road conditions over the next six hours which are ideal for travel, logistics, and real-time decision-making
+- In workspace created earlier, click New item → Pipeline
+- 
 
 Below diagram gives a glimpse of the dashboard:
 
