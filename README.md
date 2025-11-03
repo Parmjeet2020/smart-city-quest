@@ -84,7 +84,7 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 ***Fields / Attributes in Bronze & Silver Layer***
 
 |Weather Schema|Traffic Schema|
-|-----------_------|-----------------|
+|------------------|-----------------|
 |City    |geo_point_name|
 |Latitude|location_name|
 |Longitude|location_region|
