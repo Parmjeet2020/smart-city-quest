@@ -116,10 +116,25 @@ Clicking on any notebook takes to following screen:
 
 <img width="959" height="413" alt="image" src="https://github.com/user-attachments/assets/9f0dd9b8-4ae4-462e-939c-ff314eb31a27" />
 
+#### Orchestration Pipeline
+Pipeline created to orchestrate notebooks execution for data ingestion, silver layer curation, forecast ML models and dataflow execution for preparing gold lakehouse. Following are the steps to setup pipeline:
+- In workspace created earlier, click New item → Pipelin
+- Give the pipeline a meaningful name such as "SmartCity_Traffic_Realtime_Pipeline"
+- In the pipeline canvas, add relevant activities required to perform the funcion. For example, for this project following activities are in the pipeline:
+  - Notebook: to invoke event hubs to bring data from weather & traffic API, through event stream and running forecast ML model
+  - Copy data: to prepare Silver lakehouse tables with unique datasets
+  - Data flow: to invoke dataflow gen2 for transformations to prepare gold lakehouse
+  - Office 365 Email: to send email notifications on success or failure of the pipeline
+
+Below diagram shows the pipeline canvas:
+
+<img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/9f2880d7-690a-4500-a331-881ac9174ce1" />
+
 #### Gold Lakehouse
+Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the data factory pipeline "SmartCity_Traffic_Realtime_Pipeline" triggers merge operation of the datasets in silver layer. While merging the dataset, data of only selective fields is being stored in the gold lakehouse table "SmartCIty_Traffic_Weather_Realtime". Shown below is the lakehouse table view:
+
+<img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/7338e082-4d6a-4696-b6fd-28834095047b" />
 
 #### Power Bi Dashboard
-
-#### Orchestration Pipeline
 
 #### Deployment Pipeline
