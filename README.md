@@ -65,6 +65,15 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 
 <img width="957" height="415" alt="image" src="https://github.com/user-attachments/assets/6d529c7e-f8d9-49b0-9fb2-730593450c15" />
 
+### Data Model
+---
+Bronze Layer (Lakehouse): Event schema as it’s coming from APIs, is being stored in bronze layer in delta tables. Mode for data insertion is “append” to maintain history of records. Schema & table details are as below:
+
+|Schema Name|Table Name|
+|traffic_realtime|traffic_api|
+|weather_realtime|weather_api|
+
+
 #### Lakehouses
 ---
 - In the workspace created in above steps, click on a new item from top navigation → Lakehouse
