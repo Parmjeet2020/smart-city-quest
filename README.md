@@ -54,7 +54,7 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 <img width="957" height="415" alt="image" src="https://github.com/user-attachments/assets/6d529c7e-f8d9-49b0-9fb2-730593450c15" />
 
 #### Lakehouses
----
+<hr width="25%"/>
 - In the workspace created in above steps, click on a new item from top navigation → Lakehouse
 - Give it a name, like SmartCity_Traffic_Weather_Realtime_Bronze , SmartCity_Traffic_Weather_Realtime_Silver, SmartCity_Traffic_Weather_Realtime_Gold
 - This lakehouse will serve as both the streaming data destination and additionally the storage layer
@@ -66,7 +66,7 @@ Shown below is one of the Lakehouse in the projet.
 
 
 #### Eventhouses
----
+<hr width="25%"/>
 - In the workspace created earlier, create a new item → Eventhouse
   - This provides the queryable streaming database in KQL
 - In the Eventhouse, can see a default KQL database created.
@@ -76,7 +76,7 @@ Shown below is one of the event house in the project.
 <img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/18808821-2422-4b57-8b7b-f0978d3236e7" />
 
 #### Event Stream
----
+<hr width="25%"/>
 - In the workspace, create a new item → In the Real-Time Hub, create a new Eventstream
   - Configure the source
     - Choose a custom endpoint
@@ -106,7 +106,7 @@ Shown below is one of the event streams created in the project.
   - In Eventhouse, open KQL database and run queries to view data arrival.
 
 #### Notebooks
----
+<hr width="25%"/>
 - In workspace created earlier, click New item → Notebook
 - Give the notebook a name like Realtimetraffic_ingestion or weatherapi_refreshrun
 - Write python (or pyspark) code to perform the desired task, such as notebooks in the project fetch the traffic information realtime through tomtom traffic api. Realtime traffic details are then sent to Eventstream by connecting the Eventhub of Realtime_traffic_tomtom Eventstream
@@ -122,7 +122,7 @@ Clicking on any notebook takes to following screen:
 <img width="959" height="413" alt="image" src="https://github.com/user-attachments/assets/9f0dd9b8-4ae4-462e-939c-ff314eb31a27" />
 
 #### Orchestration Pipeline
----
+<hr width="25%"/>
 Pipeline created to orchestrate notebooks execution for data ingestion, silver layer curation, forecast ML models and dataflow execution for preparing gold lakehouse. 
 
 Following are the steps to setup pipeline:
@@ -139,13 +139,13 @@ Below diagram shows the pipeline canvas:
 <img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/9f2880d7-690a-4500-a331-881ac9174ce1" />
 
 #### Gold Lakehouse
----
+<hr width="25%"/>
 Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the data factory pipeline "SmartCity_Traffic_Realtime_Pipeline" triggers merge operation of the datasets in silver layer. While merging the dataset, data of only selective fields is being stored in the gold lakehouse table "SmartCIty_Traffic_Weather_Realtime". Data from this lakehouse is used to report important KPIs on Power Bi dashboard and for ML model notebook to forecast. Shown below is the lakehouse table view:
 
 <img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/7338e082-4d6a-4696-b6fd-28834095047b" />
 
 #### Power Bi Dashboard
----
+<hr width="25%"/>
 Power Bi dashboard has several reports, built on the data from Gold lakehouse. Few of those reports are:
 - 6-hour Weather & Traffic Forecast: provides short-term, localized predictions about weather and road conditions over the next six hours which are ideal for travel, logistics, and real-time decision-making
 - 6-hour Wind & speed Forecast: provides a short-term prediction of wind conditions—direction, intensity, and gusts—for the next six hours. It’s especially useful for aviation, marine operations, logistics, outdoor events, and real-time traffic or safety planning
@@ -157,4 +157,4 @@ Below diagram gives a glimpse of the dashboard:
 <img width="959" height="412" alt="image" src="https://github.com/user-attachments/assets/88a78d4c-b1b5-4ac0-b032-a7217a6d1308" />
 
 #### Deployment Pipeline
----
+<hr width="25%"/>
