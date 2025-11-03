@@ -52,7 +52,7 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 
 <img width="957" height="415" alt="image" src="https://github.com/user-attachments/assets/6d529c7e-f8d9-49b0-9fb2-730593450c15" />
 
-<u>#### Lakehouses<u>
+<u>#### Lakehouses</u>
 - In the workspace created in above steps, click on a new item from top navigation → Lakehouse
 - Give it a name, like SmartCity_Traffic_Weather_Realtime_Bronze , SmartCity_Traffic_Weather_Realtime_Silver, SmartCity_Traffic_Weather_Realtime_Gold
 - This lakehouse will serve as both the streaming data destination and additionally the storage layer
