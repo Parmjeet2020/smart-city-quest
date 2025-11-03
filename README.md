@@ -81,6 +81,30 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 |traffic_api|traffic_realtime_silver|
 |weather_api|weather_realtime_silver|
 
+***Fields / Attributes in Bronze & Silver Layer***
+
+|Weather Schema|Traffic Schema|
+|-----------_------|-----------------|
+|City    |geo_point_name|
+|Latitude|location_name|
+|Longitude|location_region|
+|Latitude|weather_realtime_silver|
+|AverageSpeed_kmph|location_country|
+|CongestionIndex_percent|location_lat|
+|PeakHourDelay_mins|location_lon|
+|dateTime|location_tz_id|
+|timestamp_millis|Localtime|
+||temp_c|
+||condition_text|
+||wind_kph|
+||Humidity|
+||air_quality_co|
+||air_quality_no2|
+||air_quality_pm25|
+||air_quality_pm25|
+||timestamp_millis|
+
+
 **Gold Layer (Lakehouse)**: Following table shows schema of the gold layer which is a combination of weather & API tables from silver layer with selective fields / attributes from both tables, relevant for reporting.  
 
 |Schema Name|Table Name|
