@@ -1,7 +1,7 @@
 # Project Smart City Quest: Showcasing "Best Use of Real-Time Intelligence (RTI)" with Microsoft Fabric
 
 The project aims at gathering the Weather and Traffic data for selective 5 cities in realtime and reporting in realtime how these parameters are changing every hour. It then shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours.
-The MA Fabric components involved in this project are:
+The MS Fabric components involved in this project are:
 - Eventghub
 - EventStream and Eventhouse
 - Lakehouses (Medallion architecture)
@@ -178,15 +178,17 @@ Deployment of code files and other items from one environment to next is orchest
 
 ### Security, Governance & Monitoring
 The following practoces have been used  in this project:
-•	Authentication/authorization via Azure AD and role based access to Fabric workspace
-•	Row-level security (RLS) in semantic models for data access control
-•	Fabric capacity App and workspace metrics for resource utilization
-•	Pipeline monitoring via data factory OOTB monitoring
+- Authentication/authorization via Azure AD and role based access to Fabric workspace
+- Row-level security (RLS) in semantic models for data access control
+- Fabric capacity App and workspace metrics for resource utilization
+- Pipeline monitoring via data factory OOTB monitoring
+- In-built lineage is used to identify the data lineage and transformations 
 
 ### Optimizations / Further Improvements for future
-•	Usage of notebooks, instead of dataflow, to perform transformations (merge operations) to prepare gold zone. This is to have strong hold and deep control on operations through code, to avoid current limitation of dataflow that it supports only for append or replace (and not upsert)
+- Usage of notebooks, instead of dataflow, to perform transformations (merge operations) to prepare gold zone. This is to have strong hold and deep control on operations through code, to avoid current limitation of dataflow that it supports only for append or replace (and not upsert)
 - Parameterize the workspace names, lakehouse names etc. in the pipelines and notebooks
 - Pipeline run stats like no. of rows read and written to be added to a logging table
+- Integration with Purview for lineage and cataloging
   
 
 
