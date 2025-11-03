@@ -18,6 +18,7 @@ The project aims at gathering the Weather and Traffic data for selective 5 citie
 ### Environments
 
 ### Dev Workspace
+**
 Prerequiste to setup:
 - Must have a Microsoft Fabric license (Pro or higher, or Fabric Capacity SKU like F8, F16, etc.).
 - Need to be part of a Microsoft 365 tenant with Fabric enabled.
@@ -52,7 +53,8 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 
 <img width="957" height="415" alt="image" src="https://github.com/user-attachments/assets/6d529c7e-f8d9-49b0-9fb2-730593450c15" />
 
-#### <u>Lakehouses</u>
+#### Lakehouses
+**
 - In the workspace created in above steps, click on a new item from top navigation → Lakehouse
 - Give it a name, like SmartCity_Traffic_Weather_Realtime_Bronze , SmartCity_Traffic_Weather_Realtime_Silver, SmartCity_Traffic_Weather_Realtime_Gold
 - This lakehouse will serve as both the streaming data destination and additionally the storage layer
