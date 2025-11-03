@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Fabirc_ML_PredictWeather&TrafficForecast"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3de90d5a-d0f3-bc43-4828-27544e3b3715"
+  }
+}
