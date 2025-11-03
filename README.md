@@ -1,20 +1,20 @@
 # Project Smart City Quest: Showcasing "Best Use of Real-Time Intelligence (RTI)" with Microsoft Fabric
-***
+
 The project aims at gathering the Weather and Traffic data for selective 5 cities in realtime and reporting in realtime how these parameters are changing every hour. It then shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours.
 
 ## Logical Architecture
-***
+
 ![Smart City Logical Architecture](https://github.com/user-attachments/assets/03ded6c7-eb8c-4626-9b9f-6a2c33df434d)
 
 ## High level flow
-***
+
 ![Smart City Quest High Level Flow](https://github.com/user-attachments/assets/341923bc-7a97-4e9f-88a0-273d669522b1)
 
 ## Project Demo
-***
+
 
 ## Project Components & Setup
-***
+
 ### Environments
 
 ## Dev Workspace
@@ -65,6 +65,9 @@ Shown below is one of the Lakehouse in the projet.
 - In the workspace created earlier, create a new item → Eventhouse
   - This provides the queryable streaming database in KQL
 - In the Eventhouse, can see a default KQL database created.
+
+Shown below is one of the event house in the project.
+<img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/18808821-2422-4b57-8b7b-f0978d3236e7" />
 
 ## Event Stream
 - In the workspace, create a new item → In the Real-Time Hub, create a new Eventstream
