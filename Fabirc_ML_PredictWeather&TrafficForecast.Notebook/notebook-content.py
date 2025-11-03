@@ -130,15 +130,3 @@ print("✅ Forecast saved to Lakehouse table: WeatherTrafficForecastNext6Hours")
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
-
-# CELL ********************
-
-# MAGIC %%bash
-# MAGIC git --version
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
