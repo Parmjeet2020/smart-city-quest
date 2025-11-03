@@ -8,7 +8,7 @@ The MS Fabric components involved in this project are:
 - Realtime Alerts
 - Realtime Dashboard
 - PowerBI Dashboards
-- Data Fatory 
+- Pipelines 
 - Deployment Pipelines
 - Email notifications
 
@@ -165,6 +165,22 @@ Power Bi dashboard has several reports, built on the data from Gold lakehouse. F
 Below diagram gives a glimpse of the dashboard:
 
 <img width="959" height="412" alt="image" src="https://github.com/user-attachments/assets/88a78d4c-b1b5-4ac0-b032-a7217a6d1308" />
+
+#### Realtime Dashboard
+---
+Realtime dashboard has been built to visualize and monitor data coming in through event streams, as it happens e.g. Smart City Quest project is bringing-in traffic &  weather data.
+
+Following are the steps to setup real-time dashboard:
+- In workspace created earlier, click New item → Real-Time Dashboard
+- Give the dashboard a meaningful name such as "SmartCity_Traffic_Environment_Real-time_Dashboard"
+- Once the dashboard is created, connect to a data source by adding a new tile
+- Select Add tile and choose a data source
+- If required, write a KQL query in the query editor to pull and process the data, to be visualized
+- Click Run to see the results and then Apply changes to display the data on the tile
+
+Below diagram shows the real-time dashboard created in the project:
+
+<img width="957" height="412" alt="image" src="https://github.com/user-attachments/assets/0ef03e3d-eea0-4ae6-92ed-e680f0a2a794" />
 
 #### Deployment Pipeline
 ---
