@@ -80,6 +80,8 @@ table SmartCIty_Traffic_Weather_Realtime
 		summarizeBy: none
 		sourceColumn: temp_c
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
 
 	column condition_text
@@ -207,6 +209,37 @@ table SmartCIty_Traffic_Weather_Realtime
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Temp_converted_Int = VALUE(SmartCIty_Traffic_Weather_Realtime[temp_c])
+		formatString: 0.00
+		lineageTag: eaed151b-cc12-41a9-b664-159e057a6114
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column NewDateTime = SmartCIty_Traffic_Weather_Realtime[dateTime]
+		dataType: dateTime
+		formatString: dd-mm-yyyy hh:nn
+		lineageTag: 5e495689-8e63-409b-848a-c3a005dbb5d1
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column NEWDATE = SmartCIty_Traffic_Weather_Realtime[dateTime]
+		dataType: dateTime
+		formatString: dd/mm/yy hh:mm:ss AM/PM
+		lineageTag: fecf6666-2446-4b2f-8b71-177a58758710
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	partition SmartCIty_Traffic_Weather_Realtime = m
 		mode: directQuery

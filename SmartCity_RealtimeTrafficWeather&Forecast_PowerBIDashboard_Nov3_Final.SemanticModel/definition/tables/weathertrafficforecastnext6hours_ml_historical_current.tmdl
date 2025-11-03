@@ -72,6 +72,27 @@ table weathertrafficforecastnext6hours_ml_historical_current
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
+	column NewHour = weathertrafficforecastnext6hours_ml_historical_current[Hour]
+		formatString: dd-mm-yyyy hh:nn
+		lineageTag: c9e3a0b8-f2b7-4c91-8acf-cdbebf9b1f30
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column NEWDATE = weathertrafficforecastnext6hours_ml_historical_current[Hour]
+		dataType: dateTime
+		formatString: dd/mm/yy hh:mm:ss AM/PM
+		lineageTag: 6790bbaa-f648-4cb5-8320-d17e7327824e
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
 	partition weathertrafficforecastnext6hours_ml_historical_current = m
 		mode: directQuery
 		source =

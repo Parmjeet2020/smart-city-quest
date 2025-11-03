@@ -10,6 +10,8 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["DirectQuery to AS - SmartCity_RealtimeTrafficWeather&Forecast_PowerBIDashboard","SmartCIty_Traffic_Weather_Realtime","weathertrafficforecastnext6hours_ml_forecast","weathertrafficforecastnext6hours_ml_historical_current"]
 
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
 ref table traffic_realtime_table
 ref table weather_realtimehub
 ref table weatherapi_realtime_table
