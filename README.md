@@ -49,6 +49,7 @@ Steps to create workspace
 - Click on save
 Created workspace will appear in the workspace list.
 Once created, click on "Workspacec" left-hand navigation and select the created workspace. This is where all the components you're going to create appears. Shown below is the dev workspace of the projet.
+
 <img width="957" height="415" alt="image" src="https://github.com/user-attachments/assets/6d529c7e-f8d9-49b0-9fb2-730593450c15" />
 
 #### Lakehouses
@@ -58,6 +59,7 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 - From the workspace UI, click any lakehouse to see its details
 
 Shown below is one of the Lakehouse in the projet.
+
 <img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/9dc4fb44-2c47-414c-b584-407b3b1d9ff1" />
 
 
@@ -67,6 +69,7 @@ Shown below is one of the Lakehouse in the projet.
 - In the Eventhouse, can see a default KQL database created.
 
 Shown below is one of the event house in the project.
+
 <img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/18808821-2422-4b57-8b7b-f0978d3236e7" />
 
 ## Event Stream
@@ -85,12 +88,33 @@ Shown below is one of the event house in the project.
         - create a new delta table for bronze
         - Input data format (JSON, Avro, CSV) for the incoming events
     - Publish the Eventstream. Once Active/Ingesting, can monitor status and verify via Data preview
+    - 
  <img width="960" height="411" alt="image" src="https://github.com/user-attachments/assets/f558c879-4a94-4ddf-b23e-cada8eeba6bb" />
 
 Shown below is one of the event streams created in the project.
+
 <img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/e9b5349e-955c-476e-b951-3f99d684baeb" />
 
+- Validation and Monitoring
+  - In the Eventstream canvas, can see the status of source(s) and destination(s) (e.g., Ingesting, Active)
+  - Use Data preview + Data insights tabs to check throughput and errors
+  - In Lakehouse, open the table to verify rows are arriving
+  - In Eventhouse, open KQL database and run queries to view data arrival.
+
 #### Notebooks
+- In workspace created earlier, click New item → Notebook
+- Give the notebook a name like Realtimetraffic_ingestion or weatherapi_refreshrun
+- Write python (or pyspark) code to perform the desired task, such as notebooks in the project fetch the traffic information realtime through tomtom traffic api. Realtime traffic details are then sent to Eventstream by connecting the Eventhub of Realtime_traffic_tomtom Eventstream
+- Once Eventstream executes, traffic data is sent to Bronze Lakehouse
+- Similarly have written the code to fetch information through weatherapi
+
+Following diagram shows where to find notebooks once created, in the workspace UI:
+
+<img width="959" height="389" alt="image" src="https://github.com/user-attachments/assets/3586bb36-160d-4787-9625-fe94e1ab5261" />
+
+Clicking on any notebook takes to following screen:
+
+<img width="959" height="413" alt="image" src="https://github.com/user-attachments/assets/9f0dd9b8-4ae4-462e-939c-ff314eb31a27" />
 
 #### Gold Lakehouse
 
