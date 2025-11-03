@@ -117,7 +117,9 @@ Clicking on any notebook takes to following screen:
 <img width="959" height="413" alt="image" src="https://github.com/user-attachments/assets/9f0dd9b8-4ae4-462e-939c-ff314eb31a27" />
 
 #### Orchestration Pipeline
-Pipeline created to orchestrate notebooks execution for data ingestion, silver layer curation, forecast ML models and dataflow execution for preparing gold lakehouse. Following are the steps to setup pipeline:
+Pipeline created to orchestrate notebooks execution for data ingestion, silver layer curation, forecast ML models and dataflow execution for preparing gold lakehouse. 
+
+Following are the steps to setup pipeline:
 - In workspace created earlier, click New item → Pipelin
 - Give the pipeline a meaningful name such as "SmartCity_Traffic_Realtime_Pipeline"
 - In the pipeline canvas, add relevant activities required to perform the funcion. For example, for this project following activities are in the pipeline:
@@ -131,10 +133,19 @@ Below diagram shows the pipeline canvas:
 <img width="959" height="414" alt="image" src="https://github.com/user-attachments/assets/9f2880d7-690a-4500-a331-881ac9174ce1" />
 
 #### Gold Lakehouse
-Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the data factory pipeline "SmartCity_Traffic_Realtime_Pipeline" triggers merge operation of the datasets in silver layer. While merging the dataset, data of only selective fields is being stored in the gold lakehouse table "SmartCIty_Traffic_Weather_Realtime". Shown below is the lakehouse table view:
+Dataflow gen2 activity named "SmartCity_Traffic_Realtime_Gold_Dataflow" in the data factory pipeline "SmartCity_Traffic_Realtime_Pipeline" triggers merge operation of the datasets in silver layer. While merging the dataset, data of only selective fields is being stored in the gold lakehouse table "SmartCIty_Traffic_Weather_Realtime". Data from this lakehouse is used to report important KPIs on Power Bi dashboard and for ML model notebook to forecast. Shown below is the lakehouse table view:
 
 <img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/7338e082-4d6a-4696-b6fd-28834095047b" />
 
 #### Power Bi Dashboard
+Power Bi dashboard has several reports, built on the data from Gold lakehouse. Few of those reports are:
+- 6-hour Weather & Traffic Forecast: provides short-term, localized predictions about weather and road conditions over the next six hours which are ideal for travel, logistics, and real-time decision-making
+- 6-hour Wind & speed Forecast: provides a short-term prediction of wind conditions—direction, intensity, and gusts—for the next six hours. It’s especially useful for aviation, marine operations, logistics, outdoor events, and real-time traffic or safety planning
+- Weather & Air Quality Insights: provide a combined view of atmospheric conditions (weather) and pollution levels (air quality), helping users understand not just what the weather will be but how healthy and safe the air will be to breathe or operate in
+- Correlation KPIs (weather, AQI & Traffic): these reveal how environmental and atmospheric factors affect mobility, safety, and pollution. These Correlation KPIs help identify why certain traffic or air conditions occur and how to predict or manage them better
+
+Below diagram gives a glimpse of the dashboard:
+
+<img width="959" height="412" alt="image" src="https://github.com/user-attachments/assets/88a78d4c-b1b5-4ac0-b032-a7217a6d1308" />
 
 #### Deployment Pipeline
