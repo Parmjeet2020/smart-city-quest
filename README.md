@@ -51,8 +51,15 @@ Created workspace will appear in the workspace list.
 Once created, click on "Workspacec" left-hand navigation and select the created workspace. This is where all the components you're going to create appears. Shown below is the dev workspace of the projet.
 <img width="957" height="415" alt="image" src="https://github.com/user-attachments/assets/6d529c7e-f8d9-49b0-9fb2-730593450c15" />
 
-
 #### Lakehouses
+- In the workspace created in above steps, click on a new item from top navigation → Lakehouse
+- Give it a name, like SmartCity_Traffic_Weather_Realtime_Bronze , SmartCity_Traffic_Weather_Realtime_Silver, SmartCity_Traffic_Weather_Realtime_Gold
+- This lakehouse will serve as both the streaming data destination and additionally the storage layer
+- From the workspace UI, click any lakehouse to see its details
+
+Shown below is one of the Lakehouse in the projet.
+<img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/9dc4fb44-2c47-414c-b584-407b3b1d9ff1" />
+
 
 #### Eventhouses
 
