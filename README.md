@@ -192,7 +192,7 @@ Deployment of code files and other items from one environment to next is orchest
 
   <img width="913" height="352" alt="image" src="https://github.com/user-attachments/assets/391c938c-8aa2-4dfa-ae3c-44d3c2b89e82" />
 
-### Security, Governance & Monitoring
+## Security, Governance & Monitoring
 The following practoces have been used  in this project:
 - Authentication/authorization via Azure AD and role based access to Fabric workspace
 - Row-level security (RLS) in semantic models for data access control
@@ -200,7 +200,7 @@ The following practoces have been used  in this project:
 - Pipeline monitoring via data factory OOTB monitoring
 - In-built lineage is used to identify the data lineage and transformations 
 
-### Optimizations / Further Improvements for future
+## Optimizations / Further Improvements for future
 - Usage of notebooks, instead of dataflow, to perform transformations (merge operations) to prepare gold zone. This is to have strong hold and deep control on operations through code, to avoid current limitation of dataflow that it supports only for append or replace (and not upsert)
 - Parameterize the workspace names, lakehouse names etc. in the pipelines and notebooks
 - Pipeline run stats like no. of rows read and written to be added to a logging table
