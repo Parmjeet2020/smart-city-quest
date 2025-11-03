@@ -16,10 +16,10 @@ The MS Fabric components involved in this project are:
 - Realtime Alerts
 - Activator
 
-**Intended Audience**
+## Intended Audience
 The project is developed for environmentalists and traffic advisory teams to help plan their initiatives to maintain and plan traffic on roads during adverse conditions.
 
-### How does the solution look like 
+## How does the solution look like 
 - The weather and traffic API endpoints are connected to Eventsteams through Eventhub connection using a notebook which gets executed every 15mins to fetch the live stream data to Bronze lakehouse. 
 - In parallel the livestream data is sent to KQL database though Eventhouse. 
 - In addition to this it also uses weather connector available in Realtime hub of Eventstream from where the realtime data is streamed to Eventhouse.
@@ -31,8 +31,10 @@ The project is developed for environmentalists and traffic advisory teams to hel
 - Realtime alerts using Fabric Activator are sent from both the dashboards if a particular KPI goes beyond a threshold limit like Congestion alert when congestion index is greater than 80.
 - Alerts are also sent for anomalies in ingested realtime data if the ingested row count is zero.
 
-### How does this solution help
+## How does this solution help
 It shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc to highlight the impact of traffic on weather. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours to help people and organizations plan in advance. 
+
+### Solution Details
 
 ## Logical Architecture
 
