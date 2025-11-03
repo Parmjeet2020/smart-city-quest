@@ -88,7 +88,7 @@ Shown below is one of the event house in the project.
         - create a new delta table for bronze
         - Input data format (JSON, Avro, CSV) for the incoming events
     - Publish the Eventstream. Once Active/Ingesting, can monitor status and verify via Data preview
-    - 
+
  <img width="960" height="411" alt="image" src="https://github.com/user-attachments/assets/f558c879-4a94-4ddf-b23e-cada8eeba6bb" />
 
 Shown below is one of the event streams created in the project.
