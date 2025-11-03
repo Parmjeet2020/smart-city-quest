@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SmartCity_RealtimeTrafficWeather&Forecast_PowerBIDashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d2e2874f-83c1-9902-4928-e2432a3c147d"
+  }
+}

@@ -1,0 +1,200 @@
+table SmartCIty_Traffic_Weather_Realtime
+	lineageTag: 4c81459b-d43e-4eb8-8b56-3eb07863ebfb
+
+	column geo_point_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9c83e56e-c4b8-4a6e-8046-31817bd8da13
+		summarizeBy: none
+		sourceColumn: geo_point_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c12a83bf-b6ad-4c7b-af1c-4c523f20584e
+		summarizeBy: none
+		sourceColumn: location_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_region
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2210f6ea-b8dc-4785-a7a6-dcf2fbee8102
+		summarizeBy: none
+		sourceColumn: location_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a063d4d7-dce6-469d-a61f-3b5cb895ff14
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_lat
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2ccd1b92-ae07-41d8-b772-2aefb444fdfa
+		summarizeBy: none
+		sourceColumn: location_lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_lon
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 356157e3-4406-4196-9ced-c890b31360fe
+		summarizeBy: none
+		sourceColumn: location_lon
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_tz_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 294048b7-3b28-4a0b-99c9-c1e81b56b1a1
+		summarizeBy: none
+		sourceColumn: location_tz_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column localtime
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 03f30c4e-b446-4376-91b6-6ad21e087350
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column temp_c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 312c208b-de49-4ffb-adbb-9ec0bae0b710
+		summarizeBy: none
+		sourceColumn: temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+	column condition_text
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4028d0e7-e685-4e59-a6cf-fe308ca801d2
+		summarizeBy: none
+		sourceColumn: condition_text
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind_kph
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 67f1321d-13cd-4e7c-8a61-3832a9c29289
+		summarizeBy: none
+		sourceColumn: wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+	column humidity
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3d87e570-4114-46a8-8947-7acac5868647
+		summarizeBy: none
+		sourceColumn: humidity
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_co
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ee97dbfb-e8c9-4edb-b33a-97932fe96fa8
+		summarizeBy: none
+		sourceColumn: air_quality_co
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_no2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 010eb8d9-23bc-4836-91c7-f14539f316f7
+		summarizeBy: none
+		sourceColumn: air_quality_no2
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_pm25
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c556d4f7-a778-4f12-af73-e2a2d88ce969
+		summarizeBy: none
+		sourceColumn: air_quality_pm25
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_pm10
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c801b6ba-55ef-4487-a01d-8602cd4925a3
+		summarizeBy: none
+		sourceColumn: air_quality_pm10
+
+		annotation SummarizationSetBy = Automatic
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2813bb1e-65b2-4d84-b62c-a8e1b85ec353
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = Automatic
+
+	column AverageSpeed_kmph
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: edd721dd-a4cc-497b-b05a-bfaf20c5e497
+		summarizeBy: sum
+		sourceColumn: AverageSpeed_kmph
+
+		annotation SummarizationSetBy = Automatic
+
+	column CongestionIndex_percent
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 481402de-6d8a-4c20-a696-65c7a55d7eae
+		summarizeBy: sum
+		sourceColumn: CongestionIndex_percent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PeakHourDelay_mins
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 3d8db695-b910-4da0-9955-f9b5030cdc88
+		summarizeBy: sum
+		sourceColumn: PeakHourDelay_mins
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition SmartCIty_Traffic_Weather_Realtime = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("mquqmq2iatkena5qkinc3lui5y-7qz3of4ucwduhn44hagmjowzcm.datawarehouse.fabric.microsoft.com", "SmartCity_Traffic_Weather_Realtime_Gold"),
+				    dbo_SmartCIty_Traffic_Weather_Realtime = Source{[Schema="dbo",Item="SmartCIty_Traffic_Weather_Realtime"]}[Data]
+				in
+				    dbo_SmartCIty_Traffic_Weather_Realtime
+
+	annotation PBI_ResultType = Table
+

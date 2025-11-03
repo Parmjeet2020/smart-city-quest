@@ -1,0 +1,69 @@
+table weathertrafficforecastnext6hours_ml_historical_current
+	lineageTag: e9a4f5c0-8837-4c67-a450-3594c89de003
+
+	column localtime
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2ac9dcb5-5efa-4d7f-a971-8efe72b8d00a
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Predicted_temp_c
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 08e9ba10-b753-4399-9b29-19eabd18b573
+		summarizeBy: sum
+		sourceColumn: Predicted_temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_wind_kph
+		dataType: double
+		sourceProviderType: float
+		lineageTag: fbfe2045-85aa-4a78-902c-2d7edbf5259b
+		summarizeBy: sum
+		sourceColumn: Predicted_wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_AvgSpeed_kmph
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 78a3332d-e352-4321-a0ab-1a831b03c8ed
+		summarizeBy: sum
+		sourceColumn: Predicted_AvgSpeed_kmph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_Congestion
+		dataType: double
+		sourceProviderType: float
+		lineageTag: adc58841-ac06-4d2c-a7ee-470266cd3d59
+		summarizeBy: sum
+		sourceColumn: Predicted_Congestion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition weathertrafficforecastnext6hours_ml_historical_current = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("mquqmq2iatkena5qkinc3lui5y-7qz3of4ucwduhn44hagmjowzcm.datawarehouse.fabric.microsoft.com", "SmartCity_Traffic_Weather_Realtime_Gold"),
+				    dbo_weathertrafficforecastnext6hours_ml_historical_current = Source{[Schema="dbo",Item="weathertrafficforecastnext6hours_ml_historical_current"]}[Data]
+				in
+				    dbo_weathertrafficforecastnext6hours_ml_historical_current
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

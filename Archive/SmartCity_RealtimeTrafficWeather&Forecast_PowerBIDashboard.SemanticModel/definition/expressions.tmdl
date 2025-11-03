@@ -1,0 +1,13 @@
+expression 'DirectQuery to AS - SmartCity_RealtimeTrafficWeather_PowerBIDashboard' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/43062964-0448-46d4-83b0-521a2dae88ee/FabricHackathon2025Dev", "SmartCity_RealtimeTrafficWeather_PowerBIDashboard"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: e8f91e54-9cb7-4f25-888e-e2a64b3b3644
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"33d7fe08-769e-43b5-81ad-0bc16dab2654"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"58b9ce99-a224-4159-bcde-59a1012a3f91"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"d1fa55f2-f01e-45e7-8dfb-9fee9b6d3c56"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"04481d6c-1148-4c93-b153-83e286639b5c"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"e513a84d-8c44-4061-8885-a3df691dfd9b"}},"objectType":"Table"}]
+

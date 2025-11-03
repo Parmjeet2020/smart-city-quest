@@ -1,0 +1,67 @@
+table smartcity_weathertrafficpredictions_ml
+	lineageTag: f8905409-1670-4cb6-a3e1-6c74ff90a932
+
+	column localtime
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fb535e6f-17b0-49ec-959e-bf1b05d0cfd1
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Predicted_temp_c
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 753ec99c-2ddb-4382-b048-45c1ba9ee3c2
+		summarizeBy: sum
+		sourceColumn: Predicted_temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_wind_kph
+		dataType: double
+		sourceProviderType: real
+		lineageTag: c47e4aab-91fa-493d-8ce5-371ff3a27d92
+		summarizeBy: sum
+		sourceColumn: Predicted_wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_AvgSpeed_kmph
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 9aa98f1b-9a83-4331-bad9-730fbad3ad20
+		summarizeBy: sum
+		sourceColumn: Predicted_AvgSpeed_kmph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_Congestion
+		dataType: double
+		sourceProviderType: real
+		lineageTag: b0a9f827-70a6-4b5a-9131-0fca59ab9ac9
+		summarizeBy: sum
+		sourceColumn: Predicted_Congestion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition smartcity_weathertrafficpredictions_ml = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("mquqmq2iatkena5qkinc3lui5y-7qz3of4ucwduhn44hagmjowzcm.datawarehouse.fabric.microsoft.com", "SmartCity_Traffic_Weather_Realtime_Gold"),
+				    dbo_smartcity_weathertrafficpredictions_ml = Source{[Schema="dbo",Item="smartcity_weathertrafficpredictions_ml"]}[Data]
+				in
+				    dbo_smartcity_weathertrafficpredictions_ml
+
+	annotation PBI_ResultType = Table
+

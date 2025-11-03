@@ -1,0 +1,68 @@
+table weathertrafficforecastnext6hours_ml
+	lineageTag: e39c2819-c31f-4781-9bcc-2bbf3399686f
+
+	column localtime
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5ee47ba9-f79f-4cec-b20b-f5ea38b17bbd
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Predicted_temp_c
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 9affbcae-d4a2-4301-8153-1fc5ee8a9b04
+		summarizeBy: sum
+		sourceColumn: Predicted_temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_wind_kph
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 7515b014-960d-4e2f-ab7a-59d08268843d
+		summarizeBy: sum
+		sourceColumn: Predicted_wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_AvgSpeed_kmph
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 0303b472-f45b-4f95-b41f-87b46a3dd7ff
+		summarizeBy: sum
+		sourceColumn: Predicted_AvgSpeed_kmph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_Congestion
+		dataType: double
+		sourceProviderType: real
+		lineageTag: b39dc53c-7b01-49fa-b2b7-efe648e71630
+		summarizeBy: sum
+		sourceColumn: Predicted_Congestion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition weathertrafficforecastnext6hours_ml = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("mquqmq2iatkena5qkinc3lui5y-7qz3of4ucwduhn44hagmjowzcm.datawarehouse.fabric.microsoft.com", "SmartCity_Traffic_Weather_Realtime_Gold"),
+				    dbo_weathertrafficforecastnext6hours_ml = Source{[Schema="dbo",Item="weathertrafficforecastnext6hours_ml"]}[Data]
+				in
+				    dbo_weathertrafficforecastnext6hours_ml
+
+	annotation PBI_ResultType = Table
+

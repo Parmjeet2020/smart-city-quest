@@ -1,0 +1,287 @@
+table weather_realtimehub
+	lineageTag: 4a7b2378-486a-4fd2-829d-e6cab6d8c484
+	sourceLineageTag: 2e207a39-caa0-4758-b31b-2048e5d77430
+
+	column dateTime
+		dataType: string
+		lineageTag: 01c73691-744a-4e2d-9d3f-15bb37ebfc7e
+		sourceLineageTag: 18778619-8379-4c08-b86c-760aa9d48474
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dateTime
+
+		annotation SummarizationSetBy = User
+
+	column description
+		dataType: string
+		lineageTag: 5f9224a7-ec90-4592-9faf-8fb2dea7430c
+		sourceLineageTag: f18d4832-5612-4aa3-a466-336bce154742
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = User
+
+	column iconCode
+		dataType: string
+		lineageTag: 294719fd-1214-4d61-8b67-4408d217db94
+		sourceLineageTag: a0398572-7c81-49c7-a473-e5d19541f626
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: iconCode
+
+		annotation SummarizationSetBy = User
+
+	column hasPrecipitation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0e0f99bd-9045-4f66-a6c0-f53b58637bf1
+		sourceLineageTag: 3571c892-671e-4563-b7f0-553b70f96043
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: hasPrecipitation
+
+		annotation SummarizationSetBy = User
+
+	column temperature
+		dataType: string
+		lineageTag: b19933cc-f140-4f94-be87-91a960f69676
+		sourceLineageTag: 74c69e52-f9b6-48e7-8eb9-260f379d9b4d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: temperature
+
+		annotation SummarizationSetBy = User
+
+	column realFeelTemperature
+		dataType: string
+		lineageTag: f6608fa2-a967-48aa-9cbb-600f8a5e8449
+		sourceLineageTag: ba157a6c-149e-402a-a367-eb0e126663ae
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: realFeelTemperature
+
+		annotation SummarizationSetBy = User
+
+	column realFeelTemperatureShade
+		dataType: string
+		lineageTag: 2a31618d-e6d9-47a3-9679-a31ca1912218
+		sourceLineageTag: 8daf7633-5838-4abf-99f2-334db6d8e80e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: realFeelTemperatureShade
+
+		annotation SummarizationSetBy = User
+
+	column relativeHumidity
+		dataType: int64
+		formatString: 0
+		lineageTag: 839d43fd-4465-4ef0-8518-f85c989d7c2b
+		sourceLineageTag: 4a1bf740-3a94-46f6-9c18-ff812534e9bb
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: relativeHumidity
+
+		annotation SummarizationSetBy = User
+
+	column dewPoint
+		dataType: string
+		lineageTag: 56f8ac89-5bcb-493c-8d66-081450ad2d26
+		sourceLineageTag: f3250875-4750-45f9-b8ba-a956b99a1f65
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dewPoint
+
+		annotation SummarizationSetBy = User
+
+	column wind
+		dataType: string
+		lineageTag: 00345715-95e1-470d-ad0c-0b4d8c04a817
+		sourceLineageTag: 82a6ccf0-d479-4fa7-952b-8e359cea6a25
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: wind
+
+		annotation SummarizationSetBy = User
+
+	column windGust
+		dataType: string
+		lineageTag: 6d75b3dc-1ae7-4b85-9f61-9fff824a19aa
+		sourceLineageTag: 36573414-34ed-48a5-a341-d5cd2f8a28ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: windGust
+
+		annotation SummarizationSetBy = User
+
+	column uvIndex
+		dataType: int64
+		formatString: 0
+		lineageTag: b78d1ec2-e42f-43c6-b256-94f4759b7ecf
+		sourceLineageTag: d360a717-0e52-4c1f-8fdf-777f5bb5d954
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: uvIndex
+
+		annotation SummarizationSetBy = User
+
+	column uvIndexDescription
+		dataType: string
+		lineageTag: 2740def3-b825-47b3-8b73-85223d02cf37
+		sourceLineageTag: 0aa2e026-aa92-4642-97ce-603a9f14a5a2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: uvIndexDescription
+
+		annotation SummarizationSetBy = User
+
+	column visibility
+		dataType: string
+		lineageTag: 13bca19c-3918-4d92-b5d9-83780efb6bce
+		sourceLineageTag: 845ecfee-d090-4bb4-9fa9-8ff9d950adcc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: visibility
+
+		annotation SummarizationSetBy = User
+
+	column obstructionsToVisibility
+		dataType: string
+		lineageTag: 2434d780-3fcd-45ac-9a94-56c13340e8f9
+		sourceLineageTag: b4c93a0c-ab70-4c8d-a76f-d4911a12b8a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: obstructionsToVisibility
+
+		annotation SummarizationSetBy = User
+
+	column cloudCover
+		dataType: int64
+		formatString: 0
+		lineageTag: df140d28-e281-4a6c-8662-0623b56bf47d
+		sourceLineageTag: d46bab63-1eb9-40a0-bd47-4baabb9143ef
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: cloudCover
+
+		annotation SummarizationSetBy = User
+
+	column cloudCeiling
+		dataType: string
+		lineageTag: 90c0b2a5-cba9-4e14-af7b-aaf878e43e49
+		sourceLineageTag: a8b2c6cc-90bf-4fa9-a330-0c4c940e2ded
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: cloudCeiling
+
+		annotation SummarizationSetBy = User
+
+	column pressure
+		dataType: string
+		lineageTag: b54f5c81-37d9-4add-89d2-0473ee639b26
+		sourceLineageTag: 96da6841-1824-4ea9-b18a-710a3aa0d930
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pressure
+
+		annotation SummarizationSetBy = User
+
+	column pressureTendency
+		dataType: string
+		lineageTag: 64dbb278-b63f-43f7-9275-833b044a40da
+		sourceLineageTag: aac59222-c70d-4b2d-a400-13360644d9d2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pressureTendency
+
+		annotation SummarizationSetBy = User
+
+	column pastTwentyFourHourTemperatureDeparture
+		dataType: string
+		lineageTag: 04659757-7ac2-41cb-a249-7f8b72c1f911
+		sourceLineageTag: 37e77d65-0e0c-416d-a02b-3c20ab38e593
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pastTwentyFourHourTemperatureDeparture
+
+		annotation SummarizationSetBy = User
+
+	column apparentTemperature
+		dataType: string
+		lineageTag: f8fe6554-33a8-4b5c-a2c4-e8ef593cd656
+		sourceLineageTag: 436cb785-0417-46f5-83fa-b04aae16d2d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: apparentTemperature
+
+		annotation SummarizationSetBy = User
+
+	column windChillTemperature
+		dataType: string
+		lineageTag: e9a92443-35f7-4509-94c8-774f797f8900
+		sourceLineageTag: 7f41c9b9-6dd7-4ed3-9a02-bf8706d7724b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: windChillTemperature
+
+		annotation SummarizationSetBy = User
+
+	column wetBulbTemperature
+		dataType: string
+		lineageTag: 9edba03b-95c7-49db-bcfc-8d6bd2b7640e
+		sourceLineageTag: ef499cf7-a99f-492c-bd5b-7f6bbcc45e00
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: wetBulbTemperature
+
+		annotation SummarizationSetBy = User
+
+	column precipitationSummary
+		dataType: string
+		lineageTag: 2363d24a-9387-42c4-9efc-840d70ae0b01
+		sourceLineageTag: 652ca7e3-8a77-4cb2-be29-040754ef3048
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: precipitationSummary
+
+		annotation SummarizationSetBy = User
+
+	column temperatureSummary
+		dataType: string
+		lineageTag: c500e6eb-c553-4056-b016-037b8908f2e9
+		sourceLineageTag: ee351766-e2d6-42a2-a0c0-1e8785546a7a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: temperatureSummary
+
+		annotation SummarizationSetBy = User
+
+	column daytime
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3eb169cf-a9f5-4a46-9185-2c22b85fe2e8
+		sourceLineageTag: 732fe57b-da5a-40ef-b155-5a2f35e0ced7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: daytime
+
+		annotation SummarizationSetBy = User
+
+	column location
+		dataType: string
+		lineageTag: 43d472d9-e5b2-47b1-a2ca-5a11a0947e02
+		sourceLineageTag: ff5b04da-fa30-442e-a580-cd4e8c73c0bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = User
+
+	partition weather_realtimehub = entity
+		mode: directQuery
+		source
+			entityName: weather_realtimehub
+			expressionSource: 'DirectQuery to AS - SmartCity_RealtimeTrafficWeather&Forecast_PowerBIDashboard'
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,223 @@
+table SmartCIty_Traffic_Weather_Realtime
+	lineageTag: 9f3504ae-2cfa-4920-868a-204f36db5325
+
+	column geo_point_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 45fd5731-7747-4133-a6f3-c9036d0eae93
+		summarizeBy: none
+		sourceColumn: geo_point_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c34327c2-6a0f-4ff1-bfae-b58d107277b3
+		summarizeBy: none
+		sourceColumn: location_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_region
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 31ac05b0-33e6-481b-b0cf-df9381b5d880
+		summarizeBy: none
+		sourceColumn: location_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c4f4f2de-8a46-4c9b-ad59-05dd99a6d91e
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_lat
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cbf968e4-f4b9-4fff-af5b-eaaf2eaa8e46
+		summarizeBy: none
+		sourceColumn: location_lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_lon
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 72531d5d-a10a-43e4-8bb4-d4d19a3c0c71
+		summarizeBy: none
+		sourceColumn: location_lon
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_tz_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 20175152-a6a4-42d6-9817-d5519b670ae7
+		summarizeBy: none
+		sourceColumn: location_tz_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column localtime
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 75de0799-7711-40f8-ab80-5319e8959630
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column temp_c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c1a90519-bb03-4cd8-a24d-d213e3eed78f
+		summarizeBy: none
+		sourceColumn: temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+	column condition_text
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: feee5277-f41a-4591-9002-6d9289eaa2c6
+		summarizeBy: none
+		sourceColumn: condition_text
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind_kph
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bef10743-bb45-4b57-aa5c-ffe8d48b5f69
+		summarizeBy: none
+		sourceColumn: wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+	column humidity
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 94dbf4b5-f815-47fd-9b56-2de75f4bec25
+		summarizeBy: none
+		sourceColumn: humidity
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_co
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fec95c04-54ed-4553-bc66-a2f986ac61c1
+		summarizeBy: none
+		sourceColumn: air_quality_co
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_no2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 79bebb9f-97df-43ea-9356-888654d14d62
+		summarizeBy: none
+		sourceColumn: air_quality_no2
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_pm25
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 98b9e4ab-a39a-44c3-8a45-dd411507e091
+		summarizeBy: none
+		sourceColumn: air_quality_pm25
+
+		annotation SummarizationSetBy = Automatic
+
+	column air_quality_pm10
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0c5d475-d24f-425f-b382-702aad987653
+		summarizeBy: none
+		sourceColumn: air_quality_pm10
+
+		annotation SummarizationSetBy = Automatic
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 630c540e-1c83-4cec-83e9-116e52cca90f
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = Automatic
+
+	column AverageSpeed_kmph
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e0f678c0-400e-41af-a37d-c15faca4bd2d
+		summarizeBy: sum
+		sourceColumn: AverageSpeed_kmph
+
+		annotation SummarizationSetBy = Automatic
+
+	column CongestionIndex_percent
+		dataType: double
+		sourceProviderType: float
+		lineageTag: d40f714b-112b-42aa-90a2-2741555f682e
+		summarizeBy: sum
+		sourceColumn: CongestionIndex_percent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PeakHourDelay_mins
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 32952b9f-266b-46b8-bb66-1b3f9cb2149b
+		summarizeBy: sum
+		sourceColumn: PeakHourDelay_mins
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column dateTime = SmartCIty_Traffic_Weather_Realtime[localtime]
+		dataType: dateTime
+		formatString: dd-mm-yyyy hh:nn:ss AM/PM
+		lineageTag: 4c9d2730-2de6-40d4-a579-be59b7455a5c
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DATE = DATE(Year(SmartCIty_Traffic_Weather_Realtime[dateTime]), MONTH(SmartCIty_Traffic_Weather_Realtime[dateTime]),DAY(SmartCIty_Traffic_Weather_Realtime[dateTime]))
+		formatString: dd-mm-yyyy
+		lineageTag: 82708646-d021-438b-9ed3-2b1415bfebc6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition SmartCIty_Traffic_Weather_Realtime = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("mquqmq2iatkena5qkinc3lui5y-7qz3of4ucwduhn44hagmjowzcm.datawarehouse.fabric.microsoft.com", "SmartCity_Traffic_Weather_Realtime_Gold"),
+				    dbo_SmartCIty_Traffic_Weather_Realtime = Source{[Schema="dbo",Item="SmartCIty_Traffic_Weather_Realtime"]}[Data]
+				in
+				    dbo_SmartCIty_Traffic_Weather_Realtime
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

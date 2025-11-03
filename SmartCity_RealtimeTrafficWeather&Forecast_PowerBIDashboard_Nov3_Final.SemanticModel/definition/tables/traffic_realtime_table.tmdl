@@ -1,0 +1,94 @@
+table traffic_realtime_table
+	lineageTag: ccc10c30-9368-4aae-90da-3130e3e25a13
+	sourceLineageTag: 6958924c-ee76-4703-b99c-af9c11424637
+
+	column City
+		dataType: string
+		lineageTag: 41d39cbb-64a0-4196-8669-dca924b72b1f
+		sourceLineageTag: 033af8f6-30be-42af-8785-d2e61b552638
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = User
+
+	column Latitude
+		dataType: double
+		lineageTag: 2d4c2cae-6978-4a7e-884d-abc9c92ff401
+		sourceLineageTag: bdef694a-8228-473e-86a3-cc4ef8367a62
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = User
+
+	column Longitude
+		dataType: double
+		lineageTag: 00950cf5-d928-4c5e-b87a-c74769e7f054
+		sourceLineageTag: ac197c20-366b-4ba1-a737-27bf88852194
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = User
+
+	column AverageSpeed_kmph
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e457af1-bcc6-4a71-b25c-08948330d671
+		sourceLineageTag: 84e8a28c-c23d-43b0-af1d-5fd482d29d8f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AverageSpeed_kmph
+
+		annotation SummarizationSetBy = User
+
+	column CongestionIndex_percent
+		dataType: double
+		lineageTag: 2691f43e-7f9a-42fe-a129-5f1b9d26f0e2
+		sourceLineageTag: da1e5f31-dfaa-4059-b281-76039bb12bc5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CongestionIndex_percent
+
+		annotation SummarizationSetBy = User
+
+	column PeakHourDelay_mins
+		dataType: double
+		lineageTag: 4231b2da-f5c5-4dc4-9fc9-857c461e7661
+		sourceLineageTag: c79ea9a4-9c1d-4897-b915-9f9b2e2f5991
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: PeakHourDelay_mins
+
+		annotation SummarizationSetBy = User
+
+	column dateTime
+		dataType: string
+		lineageTag: 0327af03-16e2-4a74-96d2-74f628c7d755
+		sourceLineageTag: ac6f0f1d-bfc1-42af-a981-411442bf36bb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dateTime
+
+		annotation SummarizationSetBy = User
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		lineageTag: 23f6e6f2-ca6c-481e-b6e4-c8e48e32a839
+		sourceLineageTag: adefd411-2bd8-4041-b7d8-54140f54d209
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = User
+
+	partition traffic_realtime_table = entity
+		mode: directQuery
+		source
+			entityName: traffic_realtime_table
+			expressionSource: 'DirectQuery to AS - SmartCity_RealtimeTrafficWeather&Forecast_PowerBIDashboard'
+
+	annotation PBI_ResultType = Exception
+

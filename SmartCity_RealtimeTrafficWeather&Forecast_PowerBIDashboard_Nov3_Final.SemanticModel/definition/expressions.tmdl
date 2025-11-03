@@ -1,0 +1,13 @@
+expression 'DirectQuery to AS - SmartCity_RealtimeTrafficWeather&Forecast_PowerBIDashboard' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/43062964-0448-46d4-83b0-521a2dae88ee/FabricHackathon2025Dev", "SmartCity_RealtimeTrafficWeather&Forecast_PowerBIDashboard"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: cae30411-171c-4272-ad04-cb680004efc6
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"f8905409-1670-4cb6-a3e1-6c74ff90a932"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"4c81459b-d43e-4eb8-8b56-3eb07863ebfb"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"f3b9d7ad-b3f8-45fc-a4f7-574ec12d9aa9"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"e39c2819-c31f-4781-9bcc-2bbf3399686f"}},"objectType":"Table"}]
+

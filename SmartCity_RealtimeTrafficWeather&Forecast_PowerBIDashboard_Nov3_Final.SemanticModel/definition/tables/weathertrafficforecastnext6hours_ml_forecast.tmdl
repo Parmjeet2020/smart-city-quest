@@ -1,0 +1,91 @@
+table weathertrafficforecastnext6hours_ml_forecast
+	lineageTag: c1446b3d-5cbf-42e7-be3f-ba5672e53317
+
+	column localtime
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ddc6e504-dbb3-4c83-95d8-3c047762f999
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Predicted_temp_c
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4f0a049f-206f-477d-8031-ed1a601a4a39
+		summarizeBy: sum
+		sourceColumn: Predicted_temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_wind_kph
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 1b9aefe6-4cfd-42ae-b749-eebfaf49f1e9
+		summarizeBy: sum
+		sourceColumn: Predicted_wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_AvgSpeed_kmph
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4f47c97a-bdb5-4e62-a34c-84039e6f200b
+		summarizeBy: sum
+		sourceColumn: Predicted_AvgSpeed_kmph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Predicted_Congestion
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6039dc50-e7de-490a-ace9-b0cdc955a544
+		summarizeBy: sum
+		sourceColumn: Predicted_Congestion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column localtime_nozone = LEFT([localtime], 19)
+		dataType: dateTime
+		formatString: dd-mm-yy hh:nn
+		lineageTag: 73f45f0a-744c-47a6-bc18-e1121d26de55
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Hour = weathertrafficforecastnext6hours_ml_forecast[localtime]
+		dataType: dateTime
+		formatString: dd-mm-yy h:nn
+		lineageTag: eb121a4a-cc22-448f-b767-2a03990fa2ae
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition weathertrafficforecastnext6hours_ml_forecast = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("mquqmq2iatkena5qkinc3lui5y-7qz3of4ucwduhn44hagmjowzcm.datawarehouse.fabric.microsoft.com", "SmartCity_Traffic_Weather_Realtime_Gold"),
+				    dbo_weathertrafficforecastnext6hours_ml_forecast = Source{[Schema="dbo",Item="weathertrafficforecastnext6hours_ml_forecast"]}[Data]
+				in
+				    dbo_weathertrafficforecastnext6hours_ml_forecast
+
+	annotation PBI_ResultType = Table
+

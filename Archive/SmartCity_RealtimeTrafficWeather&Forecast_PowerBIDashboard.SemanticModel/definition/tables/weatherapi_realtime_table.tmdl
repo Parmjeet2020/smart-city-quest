@@ -1,0 +1,183 @@
+table weatherapi_realtime_table
+	lineageTag: 2bfa7f68-c9fc-45b8-900d-e9de1b58674c
+	sourceLineageTag: 48dc7666-8a49-4a4a-bd4f-63fa845d4ca8
+
+	column geo_point_name
+		dataType: string
+		lineageTag: d141a25c-ffb4-4147-a0cd-291d3323658f
+		sourceLineageTag: 0cbaaa17-48d5-48f2-88cb-d9d6c683d4f4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: geo_point_name
+
+		annotation SummarizationSetBy = User
+
+	column location_name
+		dataType: string
+		lineageTag: fe9836d7-a78b-4be6-84d0-9965e2816630
+		sourceLineageTag: 81b198e1-3f22-45b1-b30d-8fbc3f3bca90
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_name
+
+		annotation SummarizationSetBy = User
+
+	column location_region
+		dataType: string
+		lineageTag: 6bf73750-a35f-4a01-8512-b01647d20f7a
+		sourceLineageTag: 29758387-5f50-4077-ab69-0acb31c841d1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_region
+
+		annotation SummarizationSetBy = User
+
+	column location_country
+		dataType: string
+		lineageTag: 4381c311-7195-463d-9344-eed857e25440
+		sourceLineageTag: e3e34cfb-289c-4a58-9c5e-a1ae3c151268
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = User
+
+	column location_lat
+		dataType: string
+		lineageTag: 2c445e8d-8667-4d11-9137-522bc738c73c
+		sourceLineageTag: 924b8230-499a-4ab2-b3b8-d3e48c716b7d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_lat
+
+		annotation SummarizationSetBy = User
+
+	column location_lon
+		dataType: string
+		lineageTag: a8cb49d5-b29e-43d6-b7a2-3a08677e84f3
+		sourceLineageTag: d476c719-37ad-462b-be6f-be8260f3e3a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_lon
+
+		annotation SummarizationSetBy = User
+
+	column location_tz_id
+		dataType: string
+		lineageTag: a4806842-5da4-4e28-a695-e3184101de72
+		sourceLineageTag: f0645e25-44ce-44f2-81e0-9acb59ac2a73
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_tz_id
+
+		annotation SummarizationSetBy = User
+
+	column localtime
+		dataType: string
+		lineageTag: a7dc7f7b-f80e-4010-9987-62e3defef0ed
+		sourceLineageTag: 494aea95-6a05-42c6-86f6-3f940074b000
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: localtime
+
+		annotation SummarizationSetBy = User
+
+	column temp_c
+		dataType: string
+		lineageTag: d830c580-a1f4-4adf-b9ea-f61dc7ae0154
+		sourceLineageTag: d9047bb2-3d9d-4655-880c-7fd06d330a7b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: temp_c
+
+		annotation SummarizationSetBy = User
+
+	column condition_text
+		dataType: string
+		lineageTag: 1ee2f54b-f48e-4e7f-8927-79dcad757103
+		sourceLineageTag: 45f19e25-5b8b-4207-83f3-779594e67078
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: condition_text
+
+		annotation SummarizationSetBy = User
+
+	column wind_kph
+		dataType: string
+		lineageTag: ab1ada5c-08e8-47dd-815c-3023688fa2d0
+		sourceLineageTag: 6902a05b-cc7a-477a-9830-09bc72db41b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: wind_kph
+
+		annotation SummarizationSetBy = User
+
+	column humidity
+		dataType: string
+		lineageTag: 35249c71-5986-4bd0-a187-e7d07125860e
+		sourceLineageTag: c8295b27-3e9c-47fe-94d3-770e14a45af6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: humidity
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_co
+		dataType: string
+		lineageTag: b9bd205a-c12e-4248-a58f-f8138546ec73
+		sourceLineageTag: aba752b5-07c4-47e7-bc4f-1881127c7b17
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_co
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_no2
+		dataType: string
+		lineageTag: 4ce14443-7f1b-409c-98fb-1e6a1c611ec6
+		sourceLineageTag: cf302cb9-eb36-4c2d-a554-57737a0ba68b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_no2
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_pm25
+		dataType: string
+		lineageTag: c8e8e3a1-f348-4232-87d2-084bbcf50510
+		sourceLineageTag: 729223ca-c614-452f-930d-ded6f13d464b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_pm25
+
+		annotation SummarizationSetBy = User
+
+	column air_quality_pm10
+		dataType: string
+		lineageTag: 8b102c66-cf8a-4ff2-aab9-6ba59f579033
+		sourceLineageTag: 83c728d9-0027-4d31-a697-b9c9876d41e8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: air_quality_pm10
+
+		annotation SummarizationSetBy = User
+
+	column timestamp_millis
+		dataType: int64
+		formatString: 0
+		lineageTag: 87545da1-5497-4c10-9a54-c966e00c6f60
+		sourceLineageTag: 9095000e-2f51-456d-9fa5-40b3819da90d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: timestamp_millis
+
+		annotation SummarizationSetBy = User
+
+	partition weatherapi_realtime_table = entity
+		mode: directQuery
+		source
+			entityName: weatherapi_realtime_table
+			expressionSource: 'DirectQuery to AS - SmartCity_RealtimeTrafficWeather_PowerBIDashboard'
+
+	annotation PBI_ResultType = Exception
+
