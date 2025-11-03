@@ -111,6 +111,28 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 |---|----------------------------------|
 |dbo|SmartCIty_Traffic_Weather_Realtime|
 
+***Fields / Attributes in Bronze & Silver Layer***
+|SmartCIty_Traffic_Weather_Realtime|
+|----------------------------------|
+|geo_point_name|
+|location_name|
+|location_region|
+|location_country|
+|location_lat|
+|location_lon|
+|location_tz_id|
+|Localtime|
+|temp_c|
+|condition_text|
+|wind_kph|
+|Humidity|
+|air_quality_co|
+|air_quality_no2|
+|air_quality_pm25|
+|air_quality_pm10|
+|timestamp_millis|
+|AverageSpeed_kmph|
+
 #### Lakehouses
 ---
 - In the workspace created in above steps, click on a new item from top navigation → Lakehouse
