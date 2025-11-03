@@ -70,6 +70,7 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 Bronze Layer (Lakehouse): Event schema as it’s coming from APIs, is being stored in bronze layer in delta tables. Mode for data insertion is “append” to maintain history of records. Schema & table details are as below:
 
 |Schema Name|Table Name|
+|----------------|-----------|
 |traffic_realtime|traffic_api|
 |weather_realtime|weather_api|
 
