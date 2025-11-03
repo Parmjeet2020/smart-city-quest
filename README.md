@@ -18,7 +18,7 @@ The project aims at gathering the Weather and Traffic data for selective 5 citie
 ### Environments
 
 ### Dev Workspace
-<hr style="border: 0.5px solid #ccc;" />
+<hr style="border: 0.2px solid #ccc;" />
 Prerequiste to setup:
 - Must have a Microsoft Fabric license (Pro or higher, or Fabric Capacity SKU like F8, F16, etc.).
 - Need to be part of a Microsoft 365 tenant with Fabric enabled.
