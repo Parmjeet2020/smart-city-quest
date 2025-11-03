@@ -158,3 +158,13 @@ Below diagram gives a glimpse of the dashboard:
 
 #### Deployment Pipeline
 ---
+Deployment of code files and other items from one environment to next is orchestrated through Deployment Pipeline named "fabric_hackathon". This has 3 step deployment from Development -> Staging -> Production environment with respective workspaces, as outlined above, connected to each environment. Follow the below steps to setup the next workspaces:
+- Once u complete the repository setup in dev and test it, make sure to use this deployment pipeline to propagate the setup to Stage and then to Production by selecting the items with difference between previous environment or New At Source items.
+- Run the Data Fatory pipeline named "SmartCity_Traffic_Realtime_Pipeline" in each environment to start capoturing the fdata from APIs and populating it in brinze, silver and gold lakehouses.
+- This step will start populating the required reports
+- Once the manula run of the pipeline is successful, you can schedule the pipeline for say 15mins frequency to fetch data from API endpoints andkeep the dashboards updated.
+
+  <img width="913" height="352" alt="image" src="https://github.com/user-attachments/assets/391c938c-8aa2-4dfa-ae3c-44d3c2b89e82" />
+
+
+
