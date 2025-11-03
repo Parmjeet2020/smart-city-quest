@@ -132,6 +132,8 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 |air_quality_pm10|
 |timestamp_millis|
 |AverageSpeed_kmph|
+|CongestionIndex_percent|
+|PeakHourDelay_mins|
 
 #### Lakehouses
 ---
