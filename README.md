@@ -3,16 +3,16 @@
 
 The project aims at gathering the Weather and Traffic data for selective 5 cities in realtime and reporting in realtime how these parameters are changing every hour. It then shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours.
 The MS Fabric components involved in this project are:
-- Eventhub
-- EventStream and Eventhouse
 - Lakehouses (Medallion architecture)
-- Realtime Alerts
-- Realtime Dashboard
-- PowerBI Dashboards
+- Eventhouse, EventStream & Eventhub
+- Notebooks
 - Dataflow Gen2
 - Pipelines 
+- PowerBI Dashboards
+- Realtime Dashboard 
 - Deployment Pipelines
 - Email notifications
+- Realtime Alerts
 
 ## Logical Architecture
 
@@ -136,7 +136,16 @@ Clicking on any notebook takes to following screen:
 ### Dataflow Gen2
 ---
 Dataflow Gen2 is used to transform the data and keep it ready for Gold lakehouse. It prepares the gold lakehouse for consumption in dashboards.
-In workspace created earlier, click New item → Notebook
+
+Following are the steps to setup pipeline:
+- In workspace created earlier, click New item → Dataflow Gen2
+- In the dataflow editor, select Get data and then select More
+- Select lakehouse to choose lakehouse as a source on which transformations are expected. In Smart City Quest project, source for dataflow gen2 is silver lakehouse
+- Once the datasets from the source lakehouse are available, use power query editor to perform transformations
+- Post all tranformations are done, pls select bottom-right corner to choose a destination to store the transformed data into. For Smart city project, destination for Dataflow Gen2 is Gold lakehouse
+
+Below Diagram shows a glimpse of Dataflow Gen2 setup:
+<img width="959" height="415" alt="image" src="https://github.com/user-attachments/assets/fac279f6-9104-4450-906e-4829cc4339b2" />
 
 #### Orchestration Pipeline
 ---
@@ -212,6 +221,3 @@ The following practoces have been used  in this project:
 - Parameterize the workspace names, lakehouse names etc. in the pipelines and notebooks
 - Pipeline run stats like no. of rows read and written to be added to a logging table
 - Integration with Purview for lineage and cataloging
-  
-
-
