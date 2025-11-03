@@ -34,7 +34,7 @@ The project is developed for environmentalists and traffic advisory teams to hel
 ## How does this solution help
 It shows the correlation between the traffic speed & congestion with weather KPIs like temperature, AQI etc to highlight the impact of traffic on weather. Also, it has the feature to predict and forecast weather and traffic KPIs for next 6 hours to help people and organizations plan in advance. 
 
-### Solution Details
+## Solution Details
 
 ## Logical Architecture
 
