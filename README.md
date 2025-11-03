@@ -67,13 +67,25 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 
 ### Data Model
 ---
-Bronze Layer (Lakehouse): Event schema as it’s coming from APIs, is being stored in bronze layer in delta tables. Mode for data insertion is “append” to maintain history of records. Schema & table details are as below:
+**Bronze Layer (Lakehouse)**: Event schema as it’s coming from APIs, is being stored in bronze layer in delta tables. Mode for data insertion is “append” to maintain history of records. Schema & table details are as below:
 
 |Schema Name|Table Name|
 |----------------|-----------|
 |traffic_realtime|traffic_api|
 |weather_realtime|weather_api|
 
+**Silver Layer (Lakehouse)**: Silver layer gets prepared with data from bronze layer tables in “upsert” mode. Upsert operation is being performed based on city and datetime fields to define uniqueness of the records. Schema & table details for silver are as below:
+
+|Schema Name|Table Name|
+|-----------|-----------------------|
+|traffic_api|traffic_realtime_silver|
+|weather_api|weather_realtime_silver|
+
+**Gold Layer (Lakehouse)**: Following table shows schema of the gold layer which is a combination of weather & API tables from silver layer with selective fields / attributes from both tables, relevant for reporting.  
+
+|Schema Name|Table Name|
+|---|----------------------------------|
+|dbo|SmartCIty_Traffic_Weather_Realtime|
 
 #### Lakehouses
 ---
