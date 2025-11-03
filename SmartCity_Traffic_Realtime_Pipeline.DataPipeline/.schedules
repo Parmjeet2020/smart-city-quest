@@ -9,7 +9,7 @@
         "startDateTime": "2025-10-29T11:00:00",
         "endDateTime": "2025-12-31T11:00:00",
         "localTimeZoneId": "India Standard Time",
-        "interval": 5
+        "interval": 15
       }
     }
   ]

@@ -11,18 +11,17 @@
       "id": "e8b03d61-f934-443d-9a53-590585aad64e",
       "title": "Ingestion Records by Table",
       "layout": {
-        "x": 11,
-        "y": 26,
-        "width": 12,
+        "x": 0,
+        "y": 2,
+        "width": 11,
         "height": 6
       },
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
+      "pageId": "da1b3145-93e9-45b5-8afd-2d6942ede64f",
       "visualType": "timechart",
       "queryRef": {
         "kind": "query",
         "queryId": "8b8e19c1-d24b-4fa6-8db6-95e43f0b9b16"
       },
-      "hideTitle": true,
       "visualOptions": {
         "multipleYAxes": {
           "base": {
@@ -65,12 +64,12 @@
       "layout": {
         "x": 0,
         "y": 0,
-        "width": 23,
+        "width": 22,
         "height": 7
       },
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "visualType": "markdownCard",
-      "markdownText": "The Real-Time Traffic & Weather Dashboard is your one-stop shop for up-to-date travel information. This dashboard helps you plan safer and more effective travel by combining real-time weather data with the most recent traffic reports.\r\n\r\nAverage Traffic Speed: Measures the real-time vehicle speed on major routes.\r\n\r\nTraffic Congestion Level: Shows the percentage of roads currently under heavy traffic.\r\n\r\nTravel Time & Delays: Tracks average travel times and delays caused by congestion or incidents.\r\n\r\nCurrent Weather Conditions: Live temperature, rainfall, humidity, wind speed, and visibility.\r\n\r\nWeather-Linked Traffic Impact: Highlights areas where weather is affecting traffic flow or safety.",
+      "markdownText": "The Real-Time Traffic & Weather Dashboard is your one-stop shop for up-to-date travel information. This dashboard helps you plan safer and more effective travel by combining real-time weather data with the most recent traffic reports.\r\n\r\nAverage Route Safety Index = round(Weather Score+Traffic Score/2,2))    \r\n\r\nAverage Rainfall = avg(rainfallAmount)\r\n\r\nTravel Realibility Index TRI = weatherComposite + trafficComposite/2\r\n\r\nAverage Speed Delay = Normal Speed − Actual Speed /Normal Speed × 100\r\n\r\nAverage Traffic Speed: Measures the real-time vehicle speed on major routes.\r\n\r\nTraffic Congestion Level: Shows the percentage of roads currently under heavy traffic.\r\n\r\nTravel Time & Delays: Tracks average travel times and delays caused by congestion or incidents.\r\n\r\nCurrent Weather Conditions: Live temperature, rainfall, humidity, wind speed, and visibility.\r\n\r\nWeather-Linked Traffic Impact: Highlights areas where weather is affecting traffic flow or safety.",
       "visualOptions": {
         "pie__topNSlices": null
       }
@@ -79,12 +78,12 @@
       "id": "4da08f3c-ba6c-4293-8ac9-c7c0f766fbef",
       "title": "Row count of KQL Tables",
       "layout": {
-        "x": 0,
-        "y": 26,
+        "x": 11,
+        "y": 2,
         "width": 11,
         "height": 6
       },
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
+      "pageId": "da1b3145-93e9-45b5-8afd-2d6942ede64f",
       "visualType": "table",
       "queryRef": {
         "kind": "query",
@@ -108,136 +107,15 @@
       }
     },
     {
-      "id": "cd033aaf-0e89-4f8d-974c-05cadea961d6",
-      "title": "Traffic Congestion by City (Last 1 Hour)",
-      "visualType": "map",
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
-      "layout": {
-        "x": 11,
-        "y": 32,
-        "width": 12,
-        "height": 8
-      },
-      "queryRef": {
-        "kind": "query",
-        "queryId": "e4cb584c-ec76-4a8d-9ffb-feb6b952bb39"
-      },
-      "visualOptions": {
-        "map__latitudeColumn": null,
-        "map__longitudeColumn": null,
-        "map__labelColumn": null,
-        "map__sizeColumn": null,
-        "map__sizeDisabled": true,
-        "map__geoType": "numeric",
-        "map__geoPointColumn": null
-      }
-    },
-    {
-      "id": "2beefe73-4f83-47a6-896a-7c003500bbab",
-      "title": "Realtime[weather+traffic] - Last ingestion Per Hour",
-      "visualType": "timechart",
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
-      "layout": {
-        "x": 0,
-        "y": 32,
-        "width": 11,
-        "height": 8
-      },
-      "queryRef": {
-        "kind": "query",
-        "queryId": "b64e01b7-c37d-45dd-8494-0f29552dc76d"
-      },
-      "visualOptions": {
-        "xColumn": null,
-        "xColumnTitle": "Time",
-        "multipleYAxes": {
-          "additional": [],
-          "showMultiplePanels": false,
-          "base": {
-            "horizontalLines": [],
-            "yAxisScale": "linear",
-            "yAxisMaximumValue": null,
-            "yAxisMinimumValue": null,
-            "columns": [],
-            "label": "Ingestion Count",
-            "id": "-1"
-          }
-        },
-        "yColumnTitle": "Ingestion Count",
-        "yColumns": null,
-        "seriesColumns": [
-          "Table"
-        ],
-        "anomalyColumns": null,
-        "map__longitudeColumn": null,
-        "map__latitudeColumn": null,
-        "hideLegend": false,
-        "legendLocation": "bottom",
-        "xAxisScale": "linear",
-        "verticalLine": "",
-        "crossFilterDisabled": false,
-        "drillthroughDisabled": false,
-        "crossFilter": [],
-        "drillthrough": [],
-        "selectedDataOnLoad": {
-          "all": true,
-          "limit": 10
-        }
-      }
-    },
-    {
-      "id": "671ea23b-0767-4a38-b022-29aa2aa10136",
-      "title": "Air Quality and Traffic Congestion by City (Last 1 Hour)",
-      "visualType": "bar",
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
-      "layout": {
-        "x": 0,
-        "y": 40,
-        "width": 11,
-        "height": 11
-      },
-      "queryRef": {
-        "kind": "query",
-        "queryId": "511a3de6-54a9-487c-9e61-2cf54db3b201"
-      },
-      "visualOptions": {
-        "multipleYAxes": {
-          "base": {
-            "id": "-1",
-            "label": "",
-            "columns": [],
-            "yAxisMaximumValue": null,
-            "yAxisMinimumValue": null,
-            "yAxisScale": "linear",
-            "horizontalLines": []
-          },
-          "additional": [],
-          "showMultiplePanels": false
-        },
-        "hideLegend": false,
-        "legendLocation": "bottom",
-        "xColumnTitle": "",
-        "xColumn": null,
-        "yColumns": null,
-        "seriesColumns": null,
-        "xAxisScale": "linear",
-        "verticalLine": "",
-        "crossFilterDisabled": false,
-        "drillthroughDisabled": false,
-        "crossFilter": [],
-        "drillthrough": []
-      }
-    },
-    {
       "id": "9d8a3414-1871-4181-9291-cdb5445c3b82",
       "title": "Average Air Quality Metrics by City (Last 1 Hour)",
       "visualType": "column",
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
         "x": 11,
-        "y": 40,
-        "width": 12,
-        "height": 11
+        "y": 17,
+        "width": 11,
+        "height": 9
       },
       "queryRef": {
         "kind": "query",
@@ -277,8 +155,8 @@
       "visualType": "pie",
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
-        "x": 0,
-        "y": 58,
+        "x": 11,
+        "y": 10,
         "width": 11,
         "height": 7
       },
@@ -319,8 +197,8 @@
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
         "x": 11,
-        "y": 58,
-        "width": 12,
+        "y": 26,
+        "width": 11,
         "height": 7
       },
       "queryRef": {
@@ -367,7 +245,7 @@
       "layout": {
         "x": 0,
         "y": 7,
-        "width": 5,
+        "width": 4,
         "height": 3
       },
       "queryRef": {
@@ -375,7 +253,7 @@
         "queryId": "f6ebb385-e9d9-4b9e-ae07-9c12f3ba0476"
       },
       "visualOptions": {
-        "multiStat__textSize": "auto",
+        "multiStat__textSize": "small",
         "multiStat__valueColumn": null,
         "colorRulesDisabled": false,
         "colorRules": []
@@ -387,7 +265,7 @@
       "visualType": "card",
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
-        "x": 19,
+        "x": 14,
         "y": 7,
         "width": 4,
         "height": 3
@@ -397,7 +275,7 @@
         "queryId": "122549cb-6cbf-4c3d-88df-0f58768fcb23"
       },
       "visualOptions": {
-        "multiStat__textSize": "auto",
+        "multiStat__textSize": "small",
         "multiStat__valueColumn": null,
         "colorRulesDisabled": false,
         "colorRules": []
@@ -409,9 +287,9 @@
       "visualType": "card",
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
-        "x": 14,
+        "x": 7,
         "y": 7,
-        "width": 5,
+        "width": 4,
         "height": 3
       },
       "queryRef": {
@@ -419,7 +297,7 @@
         "queryId": "fc69d690-7d86-423c-b2d3-f23d30410a1f"
       },
       "visualOptions": {
-        "multiStat__textSize": "auto",
+        "multiStat__textSize": "small",
         "multiStat__valueColumn": null,
         "colorRulesDisabled": false,
         "colorRules": []
@@ -432,7 +310,7 @@
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
         "x": 0,
-        "y": 51,
+        "y": 10,
         "width": 11,
         "height": 7
       },
@@ -472,9 +350,9 @@
       "visualType": "card",
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
-        "x": 10,
+        "x": 4,
         "y": 7,
-        "width": 4,
+        "width": 3,
         "height": 3
       },
       "queryRef": {
@@ -482,7 +360,7 @@
         "queryId": "6abb5bd0-6617-433c-a576-5f37e7fac4f2"
       },
       "visualOptions": {
-        "multiStat__textSize": "auto",
+        "multiStat__textSize": "small",
         "multiStat__valueColumn": "avgRainfall_realtimehub",
         "colorRulesDisabled": false,
         "colorRules": []
@@ -494,10 +372,10 @@
       "visualType": "pie",
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
-        "x": 11,
-        "y": 51,
-        "width": 12,
-        "height": 7
+        "x": 0,
+        "y": 17,
+        "width": 11,
+        "height": 9
       },
       "queryRef": {
         "kind": "query",
@@ -536,9 +414,9 @@
       "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
       "layout": {
         "x": 0,
-        "y": 65,
-        "width": 23,
-        "height": 8
+        "y": 33,
+        "width": 22,
+        "height": 6
       },
       "queryRef": {
         "kind": "query",
@@ -556,36 +434,14 @@
       }
     },
     {
-      "id": "748ca0a3-bfb6-4589-93fc-6d12eb7f41ac",
-      "title": "Average Rain Vs Speed Correlation",
-      "visualType": "card",
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
-      "layout": {
-        "x": 5,
-        "y": 7,
-        "width": 5,
-        "height": 3
-      },
-      "queryRef": {
-        "kind": "query",
-        "queryId": "8f713c6b-9196-4182-ac99-b1db57aa2bcc"
-      },
-      "visualOptions": {
-        "multiStat__textSize": "auto",
-        "multiStat__valueColumn": "avgRainfall_realtimehub",
-        "colorRulesDisabled": false,
-        "colorRules": []
-      }
-    },
-    {
       "id": "1a20c165-9fc8-45c2-8e85-3bf1006a7aa7",
       "title": "Last Ingestion Time and Ingestion Rows Count",
       "visualType": "column",
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
+      "pageId": "da1b3145-93e9-45b5-8afd-2d6942ede64f",
       "layout": {
         "x": 0,
-        "y": 10,
-        "width": 23,
+        "y": 16,
+        "width": 22,
         "height": 6
       },
       "queryRef": {
@@ -624,12 +480,12 @@
       "id": "ed956eaa-e5d0-40a5-b2b7-729fc4aae12b",
       "title": "Data Activity Tracker",
       "visualType": "column",
-      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
+      "pageId": "da1b3145-93e9-45b5-8afd-2d6942ede64f",
       "layout": {
         "x": 0,
-        "y": 16,
-        "width": 23,
-        "height": 10
+        "y": 8,
+        "width": 22,
+        "height": 8
       },
       "queryRef": {
         "kind": "query",
@@ -665,6 +521,108 @@
           "all": true,
           "limit": 5
         }
+      }
+    },
+    {
+      "id": "6ec50a08-c44b-45e5-b715-6ce67d42442f",
+      "title": "Stream Data Ingestion Infomation",
+      "visualType": "markdownCard",
+      "pageId": "da1b3145-93e9-45b5-8afd-2d6942ede64f",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 22,
+        "height": 2
+      },
+      "markdownText": "This tab is to visualize the streaming data ingestion progress and how many rows were ingested for the latest ingestion time. This will be useful for identification and troubleshooting of any ingestion related issues.",
+      "visualOptions": {}
+    },
+    {
+      "id": "14bd9fa4-cfb7-4e8d-93d7-fd40b7eccc9f",
+      "title": "Traffic Congestion by City (Last one hour)",
+      "visualType": "bar",
+      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
+      "layout": {
+        "x": 0,
+        "y": 26,
+        "width": 11,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "873d2bc2-20a6-4231-ae3e-03892f7125a2"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "5a5ce28f-d6fa-4fa9-a856-c4f39580dd96",
+      "title": "Average Temperature",
+      "description": "Average Temperature",
+      "visualType": "card",
+      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
+      "layout": {
+        "x": 18,
+        "y": 7,
+        "width": 4,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3e2ce61d-ea3b-4feb-886c-744000f52f0b"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorRules": []
+      }
+    },
+    {
+      "id": "d3246abb-19ba-4e71-b0e8-9a99f03edcaa",
+      "title": "Average Air Quality CO",
+      "visualType": "card",
+      "pageId": "1773a538-7161-45eb-815b-dc6318fc096c",
+      "layout": {
+        "x": 11,
+        "y": 7,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ebc87fb6-ff0a-437b-b2a7-4e6d46141a14"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "avgCO",
+        "colorRulesDisabled": false,
+        "colorRules": []
       }
     }
   ],
@@ -702,6 +660,10 @@
     {
       "name": "SmartCity Real-time Dashboard",
       "id": "1773a538-7161-45eb-815b-dc6318fc096c"
+    },
+    {
+      "name": "SmartCity Real-time_Ingestion_Info",
+      "id": "da1b3145-93e9-45b5-8afd-2d6942ede64f"
     }
   ],
   "queries": [
@@ -728,34 +690,7 @@
         "kind": "inline",
         "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
       },
-      "text": "traffic_realtime_table\n| where todatetime(dateTime) > ago(1h)\n| project Longitude, Latitude, City, CongestionIndex_percent\n| render scatterchart with (kind = map, xcolumn = Longitude, ycolumns = Latitude, series = City, title = \"Traffic Congestion by City (Last 1 Hour)\")\n",
-      "id": "e4cb584c-ec76-4a8d-9ffb-feb6b952bb39",
-      "usedVariables": []
-    },
-    {
-      "dataSource": {
-        "kind": "inline",
-        "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
-      },
-      "text": "let weatherSeries = weatherapi_realtime_table\n| summarize IngestionCount=count() by Time=bin(ingestion_time(), 1h)\n| project Time, Table=\"smartcity_weather\", IngestionCount;\nlet trafficSeries = traffic_realtime_table\n| summarize IngestionCount=count() by Time=bin(ingestion_time(), 1h)\n| project Time, Table=\"traffic-smartcity\", IngestionCount;\nweatherSeries\n| union trafficSeries\n| order by Time asc\n| render timechart \n    with (\n        kind=default,\n        title=\"Ingestion Count Trend: Smart City Weather & Traffic (Hourly)\",\n        xtitle=\"Time\",\n        ytitle=\"Ingestion Count\",\n        series=Table\n    )\n",
-      "id": "b64e01b7-c37d-45dd-8494-0f29552dc76d",
-      "usedVariables": []
-    },
-    {
-      "dataSource": {
-        "kind": "inline",
-        "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
-      },
-      "text": "weatherapi_realtime_table\n| extend City = location_name, IngestionTime = ingestion_time()\n| where IngestionTime > ago(1h)\n| summarize avgNO2=avg(todouble(air_quality_no2)), avgCO=avg(todouble(air_quality_co)), avgPM10=avg(todouble(air_quality_pm10)), avgPM25=avg(todouble(air_quality_pm25)) by City\n| join kind=inner (\n    traffic_realtime_table\n    | extend IngestionTime = ingestion_time()\n    | where IngestionTime > ago(1h)\n    | summarize avgCongestion=avg(CongestionIndex_percent) by City\n) on City\n| project City, avgNO2, avgCO, avgPM10, avgPM25, avgCongestion\n| order by City asc",
-      "id": "511a3de6-54a9-487c-9e61-2cf54db3b201",
-      "usedVariables": []
-    },
-    {
-      "dataSource": {
-        "kind": "inline",
-        "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
-      },
-      "text": "\n\nweatherapi_realtime_table\n| extend City = location_name, IngestionTime = ingestion_time()\n| where IngestionTime > ago(1h)\n| summarize avgNO2=avg(todouble(air_quality_no2)), avgPM10=avg(todouble(air_quality_pm10)), avgPM25=avg(todouble(air_quality_pm25)), avgCO=avg(todouble(air_quality_co)) by City\n| order by City asc\n| render barchart with (\n    title=\"Average Air Quality Metrics by City (Last 1 Hour)\",\n    ytitle=\"Average Value\",\n    xtitle=\"City\",\n    legend=visible\n)",
+      "text": "\n\nweatherapi_realtime_table\n| extend City = geo_point_name, IngestionTime = ingestion_time()\n| where IngestionTime > ago(1h)\n| summarize avgNO2=avg(todouble(air_quality_no2)), avgPM10=avg(todouble(air_quality_pm10)), avgPM25=avg(todouble(air_quality_pm25)), avgCO=avg(todouble(air_quality_co)) by City\n| order by City asc\n| render barchart with (\n    title=\"Average Air Quality Metrics by City (Last 1 Hour)\",\n    ytitle=\"Average Value\",\n    xtitle=\"City\",\n    legend=visible\n)",
       "id": "81c661b2-8812-4f5d-8b3b-80370d95182c",
       "usedVariables": []
     },
@@ -764,7 +699,7 @@
         "kind": "inline",
         "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
       },
-      "text": "weatherapi_realtime_table\n| summarize avgPM25=avg(toreal(air_quality_pm25)) by City=geo_point_name\n| top 10 by avgPM25\n| render piechart \n    with (\n        title=\"Top 10 Cities by Average PM2.5 Air Quality\",\n        xtitle=\"City\",\n        ytitle=\"Average PM2.5\"\n    )",
+      "text": "weatherapi_realtime_table |\nwhere isnotempty( geo_point_name)\n| summarize avgPM25=avg(toreal(air_quality_pm25)) by City=geo_point_name\n| top 10 by avgPM25\n| render piechart \n    with (\n        title=\"Top 10 Cities by Average PM2.5 Air Quality\",\n        xtitle=\"City\",\n        ytitle=\"Average PM2.5\"\n    )",
       "id": "c6445a33-40a1-48c0-bee3-bf364007cbda",
       "usedVariables": []
     },
@@ -773,7 +708,7 @@
         "kind": "inline",
         "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
       },
-      "text": "\ntraffic_realtime_table\n| extend EventTime = todatetime(dateTime)\n| summarize avgSpeed=avg(AverageSpeed_kmph) by Time=bin(EventTime, 1h)\n| order by Time asc\n| render timechart \n    with (\n        kind=default,\n        title=\"Traffic Speed Over Time\",\n        xtitle=\"Time\",\n        ytitle=\"Average Speed (km/h)\"\n    )",
+      "text": "\ntraffic_realtime_table\n| extend EventTime = todatetime(ingestion_time())\n| summarize avgSpeed=avg(AverageSpeed_kmph) by Time=bin(EventTime, 1h)\n| order by Time > ago(1h) asc\n| render timechart \n    with (\n        kind=default,\n        title=\"Traffic Speed Over Time\",\n        xtitle=\"Time\",\n        ytitle=\"Average Speed (km/h)\"\n    )",
       "id": "74d9cb04-7db3-4d22-a058-9d5d5b94b061",
       "usedVariables": []
     },
@@ -800,7 +735,7 @@
         "kind": "inline",
         "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
       },
-      "text": "// This KQL query was generated by AI:\r\n// Travel Reliability Index\r\n//Likelihood of reaching destination on time under current conditions.\r\n//% reliability create  query for this KPI\r\n//\r\nlet weatherRealtimehubKPI = weatherapi_realtime_table\r\n| summarize\r\n    avgHumidity=avg(toreal(humidity)),\r\n    avgTemp=avg(toreal(temp_c)),\r\n    avgWind=avg(toreal(wind_kph)),\r\n    avgCO=avg(toreal(air_quality_co)),\r\n    avgNO2=avg(toreal(air_quality_no2)),\r\n    avgPM25=avg(toreal(air_quality_pm25)),\r\n    avgPM10=avg(toreal(air_quality_pm10));\r\nlet trafficSmartcityKPI = traffic_realtime_table\r\n| summarize\r\n    avgSpeed=avg(toreal(AverageSpeed_kmph)),\r\n    avgCongestion=avg(toreal(CongestionIndex_percent)),\r\n    avgDelay=avg(toreal(PeakHourDelay_mins));\r\nlet weatherScore = toscalar(weatherRealtimehubKPI\r\n    | extend\r\n        weatherComposite = \r\n            ((100 - iff(avgHumidity > 80, toreal(avgHumidity - 80) * 1.5, 0.0))\r\n            + (100 - iff(avgWind > 30, toreal(avgWind - 30) * 2, 0.0))\r\n            + (100 - ((coalesce(avgCO,0.0)/10.0) + (coalesce(avgNO2,0.0)/10.0) + (coalesce(avgPM25,0.0)/10.0) + (coalesce(avgPM10,0.0)/10.0)))\r\n            + (100 - iff(avgTemp < 0 or avgTemp > 35, abs(toreal(avgTemp) - 20.0) * 2, 0.0))\r\n            ) / 4.0\r\n    | extend weatherComposite = iif(weatherComposite < 0.0, 0.0, iif(weatherComposite > 100.0, 100.0, weatherComposite))\r\n    | project weatherComposite);\r\nlet trafficScore = toscalar(trafficSmartcityKPI\r\n    | extend\r\n        trafficComposite = \r\n            (iif(avgSpeed < 0.0, 0.0, iif(avgSpeed > 100.0, 100.0, toreal(avgSpeed)))\r\n            + (100.0 - iif(avgCongestion < 0.0, 0.0, iif(avgCongestion > 100.0, 100.0, toreal(avgCongestion))))\r\n            + (100.0 - iif(avgDelay * 2.0 < 0.0, 0.0, iif(avgDelay * 2.0 > 100.0, 100.0, toreal(avgDelay) * 2.0)))\r\n            ) / 3.0\r\n    | extend trafficComposite = iif(trafficComposite < 0.0, 0.0, iif(trafficComposite > 100.0, 100.0, trafficComposite))\r\n    | project trafficComposite);\r\nprint TravelReliabilityIndex = round((weatherScore * 0.5 + trafficScore * 0.5), 2)",
+      "text": "\r\nlet weatherRealtimehubKPI = weatherapi_realtime_table\r\n| summarize\r\n    avgHumidity=avg(toreal(humidity)),\r\n    avgTemp=avg(toreal(temp_c)),\r\n    avgWind=avg(toreal(wind_kph)),\r\n    avgCO=avg(toreal(air_quality_co)),\r\n    avgNO2=avg(toreal(air_quality_no2)),\r\n    avgPM25=avg(toreal(air_quality_pm25)),\r\n    avgPM10=avg(toreal(air_quality_pm10));\r\nlet trafficSmartcityKPI = traffic_realtime_table\r\n| summarize\r\n    avgSpeed=avg(toreal(AverageSpeed_kmph)),\r\n    avgCongestion=avg(toreal(CongestionIndex_percent)),\r\n    avgDelay=avg(toreal(PeakHourDelay_mins));\r\nlet weatherScore = toscalar(weatherRealtimehubKPI\r\n    | extend\r\n        weatherComposite = \r\n            ((100 - iff(avgHumidity > 80, toreal(avgHumidity - 80) * 1.5, 0.0))\r\n            + (100 - iff(avgWind > 30, toreal(avgWind - 30) * 2, 0.0))\r\n            + (100 - ((coalesce(avgCO,0.0)/10.0) + (coalesce(avgNO2,0.0)/10.0) + (coalesce(avgPM25,0.0)/10.0) + (coalesce(avgPM10,0.0)/10.0)))\r\n            + (100 - iff(avgTemp < 0 or avgTemp > 35, abs(toreal(avgTemp) - 20.0) * 2, 0.0))\r\n            ) / 4.0\r\n    | extend weatherComposite = iif(weatherComposite < 0.0, 0.0, iif(weatherComposite > 100.0, 100.0, weatherComposite))\r\n    | project weatherComposite);\r\nlet trafficScore = toscalar(trafficSmartcityKPI\r\n    | extend\r\n        trafficComposite = \r\n            (iif(avgSpeed < 0.0, 0.0, iif(avgSpeed > 100.0, 100.0, toreal(avgSpeed)))\r\n            + (100.0 - iif(avgCongestion < 0.0, 0.0, iif(avgCongestion > 100.0, 100.0, toreal(avgCongestion))))\r\n            + (100.0 - iif(avgDelay * 2.0 < 0.0, 0.0, iif(avgDelay * 2.0 > 100.0, 100.0, toreal(avgDelay) * 2.0)))\r\n            ) / 3.0\r\n    | extend trafficComposite = iif(trafficComposite < 0.0, 0.0, iif(trafficComposite > 100.0, 100.0, trafficComposite))\r\n    | project trafficComposite);\r\nprint TravelReliabilityIndex = round((weatherScore * 0.5 + trafficScore * 0.5), 2)",
       "id": "fc69d690-7d86-423c-b2d3-f23d30410a1f",
       "usedVariables": []
     },
@@ -809,7 +744,7 @@
         "kind": "inline",
         "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
       },
-      "text": "\r\nlet weatherKPI = weatherapi_realtime_table\r\n| extend City = location_name, IngestionTime = ingestion_time()\r\n| where IngestionTime > ago(1h)\r\n| summarize maxTempC=max(todouble(temp_c)), minTempC=min(todouble(temp_c)), avgHumidity=avg(todouble(humidity)), WeatherRecords=count() by City\r\n| project City, KPI=\"Weather\", maxTempC, minTempC, avgHumidity, WeatherRecords;\r\nlet trafficKPI = traffic_realtime_table\r\n| extend IngestionTime = ingestion_time()\r\n| where IngestionTime > ago(1h)\r\n| summarize maxCongestion=max(CongestionIndex_percent), minSpeed=min(AverageSpeed_kmph), avgDelay=avg(PeakHourDelay_mins), TrafficRecords=count() by City\r\n| project City, KPI=\"Traffic\", maxCongestion, minSpeed, avgDelay, TrafficRecords;\r\nweatherKPI\r\n| join kind=fullouter (trafficKPI) on City\r\n| project City,\r\n    Weather_maxTempC=maxTempC, Weather_minTempC=minTempC, Weather_avgHumidity=avgHumidity, Weather_count=WeatherRecords,\r\n    Traffic_maxCongestion=maxCongestion, Traffic_minSpeed=minSpeed, Traffic_avgDelay=avgDelay, Traffic_count=TrafficRecords\r\n| top 10 by City\r\n",
+      "text": "\r\nlet weatherKPI = weatherapi_realtime_table\r\n| extend City = geo_point_name, IngestionTime = ingestion_time()\r\n| where IngestionTime > ago(1h)\r\n| summarize maxTempC=max(todouble(temp_c)), minTempC=min(todouble(temp_c)), avgHumidity=avg(todouble(humidity)), WeatherRecords=count() by City\r\n| project City, KPI=\"Weather\", maxTempC, minTempC, avgHumidity, WeatherRecords;\r\nlet trafficKPI = traffic_realtime_table\r\n| extend IngestionTime = ingestion_time()\r\n| where IngestionTime > ago(1h)\r\n| summarize maxCongestion=max(CongestionIndex_percent), minSpeed=min(AverageSpeed_kmph), avgDelay=avg(PeakHourDelay_mins), TrafficRecords=count() by City\r\n| project City, KPI=\"Traffic\", maxCongestion, minSpeed, avgDelay, TrafficRecords;\r\nweatherKPI\r\n| join kind=fullouter (trafficKPI) on City\r\n| project City,\r\n    Weather_maxTempC=maxTempC, Weather_minTempC=minTempC, Weather_avgHumidity=avgHumidity, Weather_count=WeatherRecords,\r\n    Traffic_maxCongestion=maxCongestion, Traffic_minSpeed=minSpeed, Traffic_avgDelay=avgDelay, Traffic_count=TrafficRecords\r\n| top 10 by City\r\n",
       "id": "b6caab8e-79c5-4cbf-bc88-87c2fd7a8ff8",
       "usedVariables": []
     },
@@ -818,7 +753,7 @@
         "kind": "inline",
         "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
       },
-      "text": "let smartcityWeatherRainKPI = weather_realtimehub\r\n| extend rainfallAmount = todouble(precipitationSummary[\"past24Hours\"][\"metric\"][\"value\"])\r\n| summarize\r\n    totalRainfall_mm=sum(rainfallAmount),\r\n    avgRainfall_mm=avg(rainfallAmount),\r\n    maxRainfall_mm=max(rainfallAmount),\r\n    minRainfall_mm=min(rainfallAmount),\r\n    countRecords=count();\r\nlet weatherRealtimehubRainKPI = weatherapi_realtime_table\r\n| extend rainfallAmount = todouble(air_quality_pm10) // No rainfall field, using air_quality_pm10 as placeholder\r\n| summarize\r\n    totalRainfall_realtimehub=sum(rainfallAmount),\r\n    avgRainfall_realtimehub=avg(rainfallAmount),\r\n    maxRainfall_realtimehub=max(rainfallAmount),\r\n    minRainfall_realtimehub=min(rainfallAmount),\r\n    countRecords_realtimehub=count();\r\nsmartcityWeatherRainKPI\r\n| extend joinKey=1\r\n| join kind=fullouter (weatherRealtimehubRainKPI | extend joinKey=1) on joinKey\r\n| project\r\n    totalRainfall_mm, avgRainfall_mm, maxRainfall_mm, minRainfall_mm, countRecords,\r\n    totalRainfall_realtimehub, avgRainfall_realtimehub, maxRainfall_realtimehub, minRainfall_realtimehub, countRecords_realtimehub\r\n| render table\r\nwith (\r\n    title=\"Rainfall KPI Summary: Smart City Weather & Realtime Weather\"\r\n)",
+      "text": "let smartcityWeatherRainKPI = weather_realtimehub\r\n| extend rainfallAmount = todouble(precipitationSummary[\"past24Hours\"][\"metric\"][\"value\"])\r\n| summarize\r\n    totalRainfall_mm=sum(rainfallAmount),\r\n    avgRainfall_mm=avg(rainfallAmount),\r\n    maxRainfall_mm=max(rainfallAmount),\r\n    minRainfall_mm=min(rainfallAmount),\r\n    countRecords=count();\r\nlet weatherRealtimehubRainKPI = weatherapi_realtime_table\r\n| extend rainfallAmount = todouble(air_quality_pm10) // No rainfall field, using air_quality_pm10 as placeholder\r\n| summarize\r\n    totalRainfall_realtimehub=sum(rainfallAmount),\r\n    avgRainfall_realtimehub=avg(rainfallAmount),\r\n    maxRainfall_realtimehub=max(rainfallAmount),\r\n    minRainfall_realtimehub=min(rainfallAmount),\r\n    countRecords_realtimehub=count();\r\nsmartcityWeatherRainKPI\r\n| extend joinKey=1\r\n| join kind=fullouter (weatherRealtimehubRainKPI | extend joinKey=1) on joinKey\r\n| project round(avgRainfall_realtimehub),\r\n    totalRainfall_mm, avgRainfall_mm, maxRainfall_mm, minRainfall_mm, countRecords,\r\n    totalRainfall_realtimehub, avgRainfall_realtimehub, maxRainfall_realtimehub, minRainfall_realtimehub, countRecords_realtimehub\r\n",
       "id": "6abb5bd0-6617-433c-a576-5f37e7fac4f2",
       "usedVariables": []
     },
@@ -827,7 +762,7 @@
         "kind": "inline",
         "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
       },
-      "text": "\nweatherapi_realtime_table\n| extend City = location_name, IngestionTime = ingestion_time()\n| where IngestionTime > ago(1h)\n| summarize avgNO2=avg(todouble(air_quality_no2)), avgPM10=avg(todouble(air_quality_pm10)), avgPM25=avg(todouble(air_quality_pm25)), avgCO=avg(todouble(air_quality_co)) by City\n| order by City asc\n| render barchart with (\n    title=\"Average Air Quality Metrics by City (Last 1 Hour)\",\n    ytitle=\"Average Value\",\n    xtitle=\"City\",\n    legend=visible\n)",
+      "text": "\nweatherapi_realtime_table\n| extend City = geo_point_name, IngestionTime = ingestion_time()\n| where IngestionTime > ago(1h)\n| summarize avgNO2=avg(todouble(air_quality_no2)), avgPM10=avg(todouble(air_quality_pm10)), avgPM25=avg(todouble(air_quality_pm25)), avgCO=avg(todouble(air_quality_co)) by City\n| order by City asc\n| render barchart with (\n    title=\"Average Air Quality Metrics by City (Last 1 Hour)\",\n    ytitle=\"Average Value\",\n    xtitle=\"City\",\n    legend=visible\n)",
       "id": "ab04b9f4-38a6-4d10-be4b-30cceb128dc9",
       "usedVariables": []
     },
@@ -838,15 +773,6 @@
       },
       "text": "\nweatherapi_realtime_table\n| extend City = location_name, IngestionTime = ingestion_time()\n| where IngestionTime > ago(1h)\n| join kind=inner (\n    traffic_realtime_table\n    | extend IngestionTime = ingestion_time()\n    | where IngestionTime > ago(1h)\n) on City\n| project-away City1, IngestionTime1\n| order by City asc, IngestionTime desc",
       "id": "d821cd97-02b1-41c5-8a41-3070a53619ce",
-      "usedVariables": []
-    },
-    {
-      "dataSource": {
-        "kind": "inline",
-        "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
-      },
-      "text": "let weatherSeries = weatherapi_realtime_table\r\n| extend EventTime = unixtime_milliseconds_todatetime(timestamp_millis)\r\n| summarize avgRain=avg(todouble(air_quality_pm10)) by Time=bin(EventTime, 1h);\r\nlet trafficSeries = traffic_realtime_table\r\n| extend EventTime = todatetime(dateTime)\r\n| summarize avgSpeed=avg(AverageSpeed_kmph) by Time=bin(EventTime, 1h);\r\nweatherSeries\r\n| join kind=inner (trafficSeries) on Time\r\n| extend rainSpeedProduct = avgRain * avgSpeed\r\n| summarize\r\n    avgRainValue=avg(avgRain),\r\n    avgSpeedValue=avg(avgSpeed),\r\n    avgProduct=avg(rainSpeedProduct),\r\n    rainVariance=variance(avgRain),\r\n    speedVariance=variance(avgSpeed)\r\n| extend covariance = avgProduct - (avgRainValue * avgSpeedValue)\r\n| extend correlationEfficiency = iif(rainVariance * speedVariance == 0, real(null), covariance / sqrt(rainVariance * speedVariance))\r\n| project correlationEfficiency",
-      "id": "8f713c6b-9196-4182-ac99-b1db57aa2bcc",
       "usedVariables": []
     },
     {
@@ -865,6 +791,33 @@
       },
       "text": "let weatherSeries = weatherapi_realtime_table\n| summarize IngestionCount=count() by Time=bin(ingestion_time(), 1h)\n| project Time, Table=\"weatherapi_realtime_table\", IngestionCount;\nlet trafficSeries = traffic_realtime_table\n| summarize IngestionCount=count() by Time=bin(ingestion_time(), 1h)\n| project Time, Table=\"traffic_realtime_table\", IngestionCount;\nlet weatherHubSeries = weather_realtimehub\n| summarize IngestionCount=count() by Time=bin(ingestion_time(), 1h)\n| project Time, Table=\"weather_realtimehub\", IngestionCount;\nweatherSeries\n| union trafficSeries\n| union weatherHubSeries\n| order by Time asc\n| render timechart \n    with (\n        kind=default,\n        title=\"Ingestion Count Trend: All Three Tables (Hourly)\",\n        xtitle=\"Time\",\n        ytitle=\"Ingestion Count\",\n        series=Table\n    )    ",
       "id": "bcc5df7c-4b07-4aaa-979f-2b12fdab16b0",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
+      },
+      "text": "// This KQL query was generated by AI:\n// create a bar graph to show congestion by city for last 1 hour\n//\ntraffic_realtime_table\n| where todatetime(dateTime) > ago(1h)\n| summarize avgCongestion=avg(CongestionIndex_percent) by City\n| render barchart with (\n    title=\"Congestion by City (Last 1 Hour)\",\n    xtitle=\"City\",\n    ytitle=\"Average Congestion (%)\"\n)",
+      "id": "873d2bc2-20a6-4231-ae3e-03892f7125a2",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
+      },
+      "text": "let weatherKPI = weatherapi_realtime_table\n| summarize\n    avgTemp=avg(toreal(temp_c)),\n    avgHumidity=avg(toreal(humidity)),\n    avgWind=avg(toreal(wind_kph)),\n    avgCO=avg(toreal(air_quality_co)),\n    avgNO2=avg(toreal(air_quality_no2)),\n    avgPM25=avg(toreal(air_quality_pm25)),\n    avgPM10=avg(toreal(air_quality_pm10));\nlet trafficKPI = traffic_realtime_table\n| summarize\n    avgSpeed=avg(toreal(AverageSpeed_kmph)),\n    avgCongestion=avg(toreal(CongestionIndex_percent)),\n    avgDelay=avg(toreal(PeakHourDelay_mins));\nweatherKPI\n| extend joinKey=1\n| join kind=inner (trafficKPI | extend joinKey=1) on joinKey\n| project avgTemp, avgHumidity, avgWind, avgCO, avgNO2, avgPM25, avgPM10, avgSpeed, avgCongestion, avgDelay",
+      "id": "3e2ce61d-ea3b-4feb-886c-744000f52f0b",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f4549525-8e86-4664-be9c-943653c1f907"
+      },
+      "text": "let weatherKPI = weatherapi_realtime_table\n| summarize\n    avgTemp=avg(toreal(temp_c)),\n    avgHumidity=avg(toreal(humidity)),\n    avgWind=avg(toreal(wind_kph)),\n    avgCO=avg(toreal(air_quality_co)),\n    avgNO2=avg(toreal(air_quality_no2)),\n    avgPM25=avg(toreal(air_quality_pm25)),\n    avgPM10=avg(toreal(air_quality_pm10));\nlet trafficKPI = traffic_realtime_table\n| summarize\n    avgSpeed=avg(toreal(AverageSpeed_kmph)),\n    avgCongestion=avg(toreal(CongestionIndex_percent)),\n    avgDelay=avg(toreal(PeakHourDelay_mins));\nweatherKPI\n| extend joinKey=1\n| join kind=inner (trafficKPI | extend joinKey=1) on joinKey\n| project avgTemp, avgHumidity, avgWind, avgCO, avgNO2, avgPM25, avgPM10, avgSpeed, avgCongestion, avgDelay",
+      "id": "ebc87fb6-ff0a-437b-b2a7-4e6d46141a14",
       "usedVariables": []
     }
   ]

@@ -118,7 +118,7 @@
         "name": "copy_weather_data_to_silver",
         "dependsOn": [
           {
-            "activity": "traffic_notebook",
+            "activity": "weather_notebook",
             "dependencyConditions": [
               "Succeeded"
             ]
@@ -210,7 +210,7 @@
         "name": "copy_traffic_data_to_silver",
         "dependsOn": [
           {
-            "activity": "weather_notebook",
+            "activity": "traffic_notebook",
             "dependencyConditions": [
               "Succeeded"
             ]
@@ -247,7 +247,313 @@
             ]
           }
         ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "3de90d5a-d0f3-bc43-4828-27544e3b3715",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Fabric_ML_Forecast_TrafficWeather_Notebook",
+        "dependsOn": [
+          {
+            "activity": "SmartCity_Traffic_Realtime_Gold_Dataflow",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "PBISemanticModelRefresh",
+        "typeProperties": {
+          "method": "post",
+          "groupId": "17b733fc-1594-4387-b79c-380cc4bad913",
+          "datasetId": "1a382818-f49e-4a16-a541-ab9709fe774c",
+          "commitMode": "Transactional",
+          "objects": [
+            {
+              "table": "SmartCIty_Traffic_Weather_Realtime"
+            }
+          ],
+          "waitOnCompletion": true,
+          "operationType": "SemanticModelRefresh"
+        },
+        "externalReferences": {
+          "connection": "0c8b8eaf-4638-4ed8-8c7c-c1502d9d2af0"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Lakehouse Data Refresh",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "Fabric_ML_Forecast_TrafficWeather_Notebook",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "ml_notebook_error",
+          "value": {
+            "value": "@concat('\n{\"FailedActivity\": \"Fabric_ML_Forecast_TrafficWeather_Notebook\", \n\t\"ErrorMessage\": \"', activity('Fabric_ML_Forecast_TrafficWeather_Notebook').Error.message, '\",\n\t\"ErrorCode\": \"', activity('Fabric_ML_Forecast_TrafficWeather_Notebook').Error.errorCode, '\"\n\t}\n')",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Set ML Noteboook",
+        "dependsOn": [
+          {
+            "activity": "Fabric_ML_Forecast_TrafficWeather_Notebook",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Office365Email",
+        "typeProperties": {
+          "body": "<p>SmartCity Pipeline @{pipeline().PipelineName} Run Successful for the run at @{pipeline().TriggerTime}</p>\n<p>Weather Data Read - @{activity('copy_weather_data_to_silver').output.rowsRead}</p>\n<p>Weather Data Written -@{activity('copy_weather_data_to_silver').output.rowsCopied}</p>",
+          "to": "anand.wate@publicissapient.com; parmjeet.virdi@publicissapient.com;jerlin.lourds@publicissapient.com;gaurav.tomar3@publicissapient.com",
+          "subject": "SmartCity Pipeline Run Success"
+        },
+        "externalReferences": {
+          "connection": "e9420a57-45ad-4585-8259-41cff5e98631"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Send Success Email",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "Lakehouse Data Refresh",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Office365Email",
+        "typeProperties": {
+          "body": "<p>Workspace ID: @{pipeline().DataFactory}</p>\n<p>Pipeline ID: @{pipeline().Pipeline} &nbsp;Name: @{pipeline().PipelineName}</p>\n<p>Pipeline Trigger Time: @{pipeline().TriggerTime}</p>\n<p>Smartcity Pipeline @{pipeline().PipelineName} Failed for run at @{pipeline().TriggerTime}. The error is --&nbsp;</p>\n<p>@{variables('ml_notebook_error')}</p>\n<p>@{variables('df_error')}</p>\n<p>@{variables('nb_traffic_error')}@{variables('copy_traffic_error')}@{variables('nb_weather_error')}@{variables('copy_weather_error')}</p>",
+          "to": "anand.wate@publicissapient.com; parmjeet.virdi@publicissapient.com;jerlin.lourds@publicissapient.com;gaurav.tomar3@publicissapient.com",
+          "subject": "SmartCity Pipeline Run Failure"
+        },
+        "externalReferences": {
+          "connection": "e9420a57-45ad-4585-8259-41cff5e98631"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Send Failure Email",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "Set ML Noteboook",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          },
+          {
+            "activity": "Set SmartCity Traffic Realtime DF",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          },
+          {
+            "activity": "Set Copy Traffic Data Error",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          },
+          {
+            "activity": "Set Weather Notebook error",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          },
+          {
+            "activity": "Set Copy Weather Data Error",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          },
+          {
+            "activity": "Set Traffic Notebook error",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "df_error",
+          "value": {
+            "value": "@concat('\n{\"FailedActivity\": \"SmartCity_Traffic_Realtime_Gold_Dataflow\", \n\t\"ErrorMessage\": \"', activity('SmartCity_Traffic_Realtime_Gold_Dataflow').Error.message, '\",\n\t\"ErrorCode\": \"', activity('SmartCity_Traffic_Realtime_Gold_Dataflow').Error.errorCode, '\"\n\t}\n')",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Set SmartCity Traffic Realtime DF",
+        "dependsOn": [
+          {
+            "activity": "SmartCity_Traffic_Realtime_Gold_Dataflow",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "copy_traffic_error",
+          "value": {
+            "value": "@concat('\n{\"FailedActivity\": \"copy_traffic_data_to_silver\", \n\t\"ErrorMessage\": \"', activity('copy_traffic_data_to_silver').Error.message, '\",\n\t\"ErrorCode\": \"', activity('copy_traffic_data_to_silver').Error.errorCode, '\"\n\t}\n')",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Set Copy Traffic Data Error",
+        "dependsOn": [
+          {
+            "activity": "copy_traffic_data_to_silver",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "nb_weather_error",
+          "value": {
+            "value": "@concat('\n{\"FailedActivity\": \"weather_notebook\", \n\t\"ErrorMessage\": \"', activity('weather_notebook').Error.message, '\",\n\t\"ErrorCode\": \"', activity('weather_notebook').Error.errorCode, '\"\n\t}\n')",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Set Weather Notebook error",
+        "dependsOn": [
+          {
+            "activity": "weather_notebook",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "copy_weather_error",
+          "value": {
+            "value": "@concat('\n{\"FailedActivity\": \"copy_weather_data_to_silver\", \n\t\"ErrorMessage\": \"', activity('copy_weather_data_to_silver').Error.message, '\",\n\t\"ErrorCode\": \"', activity('copy_weather_data_to_silver').Error.errorCode, '\"\n\t}\n')",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Set Copy Weather Data Error",
+        "dependsOn": [
+          {
+            "activity": "copy_weather_data_to_silver",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "nb_traffic_error",
+          "value": {
+            "value": "@concat('\n{\"FailedActivity\": \"traffic_notebook\", \n\t\"ErrorMessage\": \"', activity('traffic_notebook').Error.message, '\",\n\t\"ErrorCode\": \"', activity('traffic_notebook').Error.errorCode, '\"\n\t}\n')",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Set Traffic Notebook error",
+        "dependsOn": [
+          {
+            "activity": "traffic_notebook",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
       }
-    ]
+    ],
+    "variables": {
+      "ml_notebook_error": {
+        "type": "String"
+      },
+      "df_error": {
+        "type": "String"
+      },
+      "nb_traffic_error": {
+        "type": "String"
+      },
+      "copy_traffic_error": {
+        "type": "String"
+      },
+      "nb_weather_error": {
+        "type": "String"
+      },
+      "copy_weather_error": {
+        "type": "String"
+      }
+    }
   }
 }
