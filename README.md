@@ -133,7 +133,7 @@ Once created, click on "Workspacec" left-hand navigation and select the created 
 |---|----------------------------------|
 |dbo|SmartCIty_Traffic_Weather_Realtime|
 
-***Fields / Attributes in Bronze & Silver Layer***
+***Fields / Attributes in Gold Layer***
 |SmartCIty_Traffic_Weather_Realtime|
 |----------------------------------|
 |geo_point_name|
