@@ -45,7 +45,7 @@ It shows the correlation between the traffic speed & congestion with weather KPI
 ![Smart City Quest High Level Flow](https://github.com/user-attachments/assets/341923bc-7a97-4e9f-88a0-273d669522b1)
 
 ## Project Demo
-
+https://youtu.be/yc8KnpeseXY
 
 ## Project Components & Setup
 
